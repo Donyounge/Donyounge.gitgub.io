@@ -1,2 +1,114 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 04:34:15 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Testnew</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Testnew.html</link><description>huohuohuo。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Testnew.html</guid><pubDate>Sat, 22 Feb 2025 04:25:47 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 05:08:23 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>测试功能</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</link><description># markdown语法
+
+
+
+# 标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题
+
+##### 五级标题
+
+###### 六级标题
+
+
+
+## 引用
+
+&gt; 这是一段引用
+
+&gt; https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1db826af20ac643dce96190fd8c9f0e3 bilibili net
+
+
+
+## 有序列表：
+
+把大象关进冰箱需要3步：
+
+1. 打开冰箱
+
+2. 把大象放进冰箱
+
+3. 关上冰箱
+
+
+
+## 无序列表
+
+把大象关进冰箱需要3步：
+
+- 打开冰箱
+
+- 把大象放进冰箱
+
+- 关上冰箱
+
+
+
+## 任务列表
+
+今天学习任务列表:
+
+- [ ] 今天
+
+- [x] 今天
+
+- [x] 今天
+
+
+
+## 代码块
+
+```c
+
+int main(){
+
+	return 0;
+
+}
+
+```
+
+
+
+## 数学公式
+
+$$
+
+\frac{\partial f}{\partial x} = 2\sqrt{a}x
+
+$$
+
+
+
+## 行内数学公式
+
+
+
+$\theta=x^2$
+
+
+
+## 表格
+
+|姓名|年龄|成绩|
+
+|:---|---:|:---:|
+
+|张三|19|19|
+
+|李四|19|19|
+
+
+
+## 脚注
+
+一键三连[^三连]
+
+
+
+[^三连]:点赞，投币，收藏。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</guid><pubDate>Sat, 22 Feb 2025 04:46:31 +0000</pubDate></item><item><title>Testnew</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Testnew.html</link><description>huohuohuo。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Testnew.html</guid><pubDate>Sat, 22 Feb 2025 04:25:47 +0000</pubDate></item></channel></rss>
