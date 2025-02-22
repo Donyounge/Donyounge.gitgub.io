@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="#关于 sizeof()函数的使用
+<meta name="description" content="# 关于 sizeof()函数的相关知识
 ```c
 #include <stdio.h>
 
@@ -38,9 +38,26 @@ sizeof(数据类型)  计算数据类型所占的字节数
 //			     tb           1024gb = 1tb
 //			     pb           1024tb = 1pb
 //			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb。">
+//			     zb           1024eb = 1zb
+---
+# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+## 源文件1
+```c
+int d = 22；
+```
+## 源文件2
+```c
+extern int d；\\声明了一个变量d，类型为int,来自外部文件的全局变量，可以在整个工程中适用
+```
+# 常量类型
+
+1. 字面常量
+2. const修饰的常变量
+3. define定义的标识符常量
+4. 枚举常量
+。">
 <meta property="og:title" content="Code Note 1">
-<meta property="og:description" content="#关于 sizeof()函数的使用
+<meta property="og:description" content="# 关于 sizeof()函数的相关知识
 ```c
 #include <stdio.h>
 
@@ -68,7 +85,24 @@ sizeof(数据类型)  计算数据类型所占的字节数
 //			     tb           1024gb = 1tb
 //			     pb           1024tb = 1pb
 //			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb。">
+//			     zb           1024eb = 1zb
+---
+# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+## 源文件1
+```c
+int d = 22；
+```
+## 源文件2
+```c
+extern int d；\\声明了一个变量d，类型为int,来自外部文件的全局变量，可以在整个工程中适用
+```
+# 常量类型
+
+1. 字面常量
+2. const修饰的常变量
+3. define定义的标识符常量
+4. 枚举常量
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -139,7 +173,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>#关于 sizeof()函数的使用</p>
+<div class="markdown-body" id="postBody"><h1>关于 sizeof()函数的相关知识</h1>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
 
 <span class="pl-smi">int</span> <span class="pl-en">main</span>()
@@ -155,7 +189,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
         <span class="pl-k">return</span> <span class="pl-c1">0</span>；
 }</pre></div>
-<p>sizeof(数据类型)  计算数据类型所占的字节数<br>
+<h2>sizeof(数据类型)  计算数据类型所占的字节数<br>
 一般前用%lu %zu %zd打印sizeof的结果<br>
 计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小<br>
 byte 字节   8比特位 = 1字节<br>
@@ -165,7 +199,19 @@ byte 字节   8比特位 = 1字节<br>
 //			     tb           1024gb = 1tb<br>
 //			     pb           1024tb = 1pb<br>
 //			    eb           1024pb = 1eb<br>
-//			     zb           1024eb = 1zb</p></div>
+//			     zb           1024eb = 1zb</h2>
+<h1>同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：</h1>
+<h2>源文件1</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-s1">d</span> <span class="pl-c1">=</span> <span class="pl-c1">22</span>；</pre></div>
+<h2>源文件2</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">extern</span> <span class="pl-smi">int</span> <span class="pl-s1">d</span>；\\<span class="pl-s1">声明了一个变量d</span>，<span class="pl-s1">类型为int</span>,<span class="pl-s1">来自外部文件的全局变量</span>，<span class="pl-s1">可以在整个工程中适用</span></pre></div>
+<h1>常量类型</h1>
+<ol>
+<li>字面常量</li>
+<li>const修饰的常变量</li>
+<li>define定义的标识符常量</li>
+<li>枚举常量</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

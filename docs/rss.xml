@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 08:15:33 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description>#关于 sizeof()函数的使用
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 14:52:00 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description># 关于 sizeof()函数的相关知识
 ```c
 #include &lt;stdio.h&gt;
 
@@ -27,7 +27,24 @@ sizeof(数据类型)  计算数据类型所占的字节数
 //			     tb           1024gb = 1tb
 //			     pb           1024tb = 1pb
 //			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</guid><pubDate>Sat, 22 Feb 2025 08:04:10 +0000</pubDate></item><item><title>测试功能</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</link><description># markdown语法
+//			     zb           1024eb = 1zb
+---
+# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+## 源文件1
+```c
+int d = 22；
+```
+## 源文件2
+```c
+extern int d；\\声明了一个变量d，类型为int,来自外部文件的全局变量，可以在整个工程中适用
+```
+# 常量类型
+
+1. 字面常量
+2. const修饰的常变量
+3. define定义的标识符常量
+4. 枚举常量
+。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</guid><pubDate>Sat, 22 Feb 2025 08:04:10 +0000</pubDate></item><item><title>测试功能</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</link><description># markdown语法
 
 
 
