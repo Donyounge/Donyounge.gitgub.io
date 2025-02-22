@@ -43,3 +43,44 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
+```c
+30   ;  //字面常量
+3.14 ;  
+'w'  ;  //字符，用了单引号
+"asd";  //能用肉眼观察到的常量，字符串用的双引号
+```
+---
+```c
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。
+int arr[10] = { 0 };//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量
+```
+---
+```c
+#define MAX 100 //不可被更改
+#define HHH "sada"
+int main()
+{
+	printf("%d\n", MAX);
+	int a = MAX;
+	printf("%s\n", HHH);//打印字符串使用%s 单个字符打印用%c
+return 0;
+}
+```
+---
+```c
+enum Color
+	{
+	RED,//此三为枚举常量
+	GREEN,
+	BLUE
+	};
+enum Color c = RED;
+enum SEX
+	{Male,
+	 Female,
+	 SECRET
+         };  
+```
+枚举常量先进行内容的定义列举，之后再调用枚举常量时所定义的常量的形式只能从枚举的内容中定义
+例如 enum SEX x=1 是不允许的
+```

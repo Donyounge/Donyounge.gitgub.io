@@ -55,7 +55,15 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
-。">
+```c
+30   ;  //字面常量
+3.14 ;  
+'w'  ;  //字符，用了单引号
+'asd';  //能用肉眼观察到的常量，字符串用的双引号
+```
+---
+```c
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
 <meta property="og:title" content="Code Note 1">
 <meta property="og:description" content="# 关于 sizeof()函数的相关知识
 ```c
@@ -102,7 +110,15 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
-。">
+```c
+30   ;  //字面常量
+3.14 ;  
+'w'  ;  //字符，用了单引号
+'asd';  //能用肉眼观察到的常量，字符串用的双引号
+```
+---
+```c
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -211,7 +227,40 @@ byte 字节   8比特位 = 1字节<br>
 <li>const修饰的常变量</li>
 <li>define定义的标识符常量</li>
 <li>枚举常量</li>
-</ol></div>
+</ol>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-c1">30</span>   ;  <span class="pl-c">//字面常量</span>
+<span class="pl-c1">3.14</span> ;  
+<span class="pl-c1">'w'</span>  ;  <span class="pl-c">//字符，用了单引号</span>
+<span class="pl-s">"asd"</span>;  <span class="pl-c">//能用肉眼观察到的常量，字符串用的双引号</span></pre></div>
+<hr>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</span>
+<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量</span></pre></div>
+<hr>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-c1">MAX</span> 100 //不可被更改
+<span class="pl-k">#define</span> <span class="pl-c1">HHH</span> "sada"
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-c1">MAX</span>);
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">MAX</span>;
+	<span class="pl-en">printf</span>(<span class="pl-s">"%s\n"</span>, <span class="pl-c1">HHH</span>);<span class="pl-c">//打印字符串使用%s 单个字符打印用%c</span>
+<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<hr>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">enum</span> <span class="pl-smi">Color</span>
+	{
+	<span class="pl-c1">RED</span>,<span class="pl-c">//此三为枚举常量</span>
+	<span class="pl-c1">GREEN</span>,
+	<span class="pl-c1">BLUE</span>
+	};
+<span class="pl-k">enum</span> <span class="pl-smi">Color</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-c1">RED</span>;
+<span class="pl-k">enum</span> <span class="pl-smi">SEX</span>
+	{<span class="pl-s1">Male</span>,
+	 <span class="pl-s1">Female</span>,
+	 <span class="pl-c1">SECRET</span>
+         };  </pre></div>
+<p>枚举常量先进行内容的定义列举，之后再调用枚举常量时所定义的常量的形式只能从枚举的内容中定义<br>
+例如 enum SEX x=1 是不允许的</p>
+<pre class="notranslate"><code class="notranslate"></code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
