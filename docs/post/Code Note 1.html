@@ -10,237 +10,69 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# markdown语法
-
-
-
-# 标题
-
-## 二级标题
-
-### 三级标题
-
-#### 四级标题
-
-##### 五级标题
-
-###### 六级标题
-
-
-
-## 引用
-
-> 这是一段引用
-
-> https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&vd_source=1db826af20ac643dce96190fd8c9f0e3 bilibili net
-
-
-
-## 有序列表：
-
-把大象关进冰箱需要3步：
-
-1. 打开冰箱
-
-2. 把大象放进冰箱
-
-3. 关上冰箱
-
-
-
-## 无序列表
-
-把大象关进冰箱需要3步：
-
-- 打开冰箱
-
-- 把大象放进冰箱
-
-- 关上冰箱
-
-
-
-## 任务列表
-
-今天学习任务列表:
-
-- [ ] 今天
-
-- [x] 今天
-
-- [x] 今天
-
-
-
-## 代码块
-
+<meta name="description" content="#关于 sizeof()函数的使用
 ```c
+#include <stdio.h>
 
-int main(){
+int main()
+{
+	printf('%d\n',sizeof(char));              //1    字节
+	printf('%d\n',sizeof(short));             //2
+	printf('%d\n',sizeof(int));               //4
+	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%d\n',sizeof(long long));         //8
+	printf('%d\n',sizeof(float));             //4
+	printf('%d\n',sizeof(double));            //8
+	printf('%d\n',sizeof(long double));       //12
 
-	return 0;
-
+        return 0；
 }
-
 ```
-
-
-
-## 数学公式
-
-$$
-
-\frac{\partial f}{\partial x} = 2\sqrt{a}x
-
-$$
-
-
-
-## 行内数学公式
-
-
-
-$\theta=x^2$
-
-
-
-## 表格
-
-|姓名|年龄|成绩|
-
-|:---|---:|:---:|
-
-|张三|19|19|
-
-|李四|19|19|
-
-
-
-## 脚注
-
-一键三连[^三连]
-
-
-
-[^三连]:点赞，投币，收藏。">
-<meta property="og:title" content="测试功能">
-<meta property="og:description" content="# markdown语法
-
-
-
-# 标题
-
-## 二级标题
-
-### 三级标题
-
-#### 四级标题
-
-##### 五级标题
-
-###### 六级标题
-
-
-
-## 引用
-
-> 这是一段引用
-
-> https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&vd_source=1db826af20ac643dce96190fd8c9f0e3 bilibili net
-
-
-
-## 有序列表：
-
-把大象关进冰箱需要3步：
-
-1. 打开冰箱
-
-2. 把大象放进冰箱
-
-3. 关上冰箱
-
-
-
-## 无序列表
-
-把大象关进冰箱需要3步：
-
-- 打开冰箱
-
-- 把大象放进冰箱
-
-- 关上冰箱
-
-
-
-## 任务列表
-
-今天学习任务列表:
-
-- [ ] 今天
-
-- [x] 今天
-
-- [x] 今天
-
-
-
-## 代码块
-
+sizeof(数据类型)  计算数据类型所占的字节数
+一般前用%lu %zu %zd打印sizeof的结果
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
+	               byte 字节   8比特位 = 1字节 
+//			   kb         1024byte = 1kb
+//			   mb           1024kb = 1mb 
+//		           gb           1024mb = 1gb
+//			     tb           1024gb = 1tb
+//			     pb           1024tb = 1pb
+//			    eb           1024pb = 1eb
+//			     zb           1024eb = 1zb。">
+<meta property="og:title" content="Code Note 1">
+<meta property="og:description" content="#关于 sizeof()函数的使用
 ```c
+#include <stdio.h>
 
-int main(){
+int main()
+{
+	printf('%d\n',sizeof(char));              //1    字节
+	printf('%d\n',sizeof(short));             //2
+	printf('%d\n',sizeof(int));               //4
+	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%d\n',sizeof(long long));         //8
+	printf('%d\n',sizeof(float));             //4
+	printf('%d\n',sizeof(double));            //8
+	printf('%d\n',sizeof(long double));       //12
 
-	return 0;
-
+        return 0；
 }
-
 ```
-
-
-
-## 数学公式
-
-$$
-
-\frac{\partial f}{\partial x} = 2\sqrt{a}x
-
-$$
-
-
-
-## 行内数学公式
-
-
-
-$\theta=x^2$
-
-
-
-## 表格
-
-|姓名|年龄|成绩|
-
-|:---|---:|:---:|
-
-|张三|19|19|
-
-|李四|19|19|
-
-
-
-## 脚注
-
-一键三连[^三连]
-
-
-
-[^三连]:点赞，投币，收藏。">
+sizeof(数据类型)  计算数据类型所占的字节数
+一般前用%lu %zu %zd打印sizeof的结果
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
+	               byte 字节   8比特位 = 1字节 
+//			   kb         1024byte = 1kb
+//			   mb           1024kb = 1mb 
+//		           gb           1024mb = 1gb
+//			     tb           1024gb = 1tb
+//			     pb           1024tb = 1pb
+//			    eb           1024pb = 1eb
+//			     zb           1024eb = 1zb。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html">
+<meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
-<title>测试功能</title>
+<title>Code Note 1</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
@@ -283,7 +115,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">测试功能</h1>
+<h1 class="postTitle">Code Note 1</h1>
 <div class="title-right">
     <a href="https://Donyounge.github.io/Donyounge.gitgub.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -291,7 +123,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/Donyounge/Donyounge.gitgub.io/issues/2" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/Donyounge/Donyounge.gitgub.io/issues/3" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -307,122 +139,33 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>markdown语法</h1>
-<h1>标题</h1>
-<h2>二级标题</h2>
-<h3>三级标题</h3>
-<h4>四级标题</h4>
-<h5>五级标题</h5>
-<h6>六级标题</h6>
-<h2>引用</h2>
-<blockquote>
-<p>这是一段引用</p>
-</blockquote>
-<blockquote>
-<p><a href="https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1db826af20ac643dce96190fd8c9f0e3" rel="nofollow">https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1db826af20ac643dce96190fd8c9f0e3</a> bilibili net</p>
-</blockquote>
-<h2>有序列表：</h2>
-<p>把大象关进冰箱需要3步：</p>
-<ol>
-<li>
-<p>打开冰箱</p>
-</li>
-<li>
-<p>把大象放进冰箱</p>
-</li>
-<li>
-<p>关上冰箱</p>
-</li>
-</ol>
-<h2>无序列表</h2>
-<p>把大象关进冰箱需要3步：</p>
-<ul>
-<li>
-<p>打开冰箱</p>
-</li>
-<li>
-<p>把大象放进冰箱</p>
-</li>
-<li>
-<p>关上冰箱</p>
-</li>
-</ul>
-<h2>任务列表</h2>
-<p>今天学习任务列表:</p>
-<ul class="contains-task-list">
-<li class="task-list-item">
-<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> 今天</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 今天</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> 今天</p>
-</li>
-</ul>
-<h2>代码块</h2>
-<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>(){
+<div class="markdown-body" id="postBody"><p>#关于 sizeof()函数的使用</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
 
-	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">char</span>));              <span class="pl-c">//1    字节</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">short</span>));             <span class="pl-c">//2</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">int</span>));               <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long</span>));              <span class="pl-c">//4         C语言规定sizeof(long)&gt;=sizeof(int)</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long long</span>));         <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">float</span>));             <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">double</span>));            <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long <span class="pl-smi">double</span></span>));       <span class="pl-c">//12</span>
 
+        <span class="pl-k">return</span> <span class="pl-c1">0</span>；
 }</pre></div>
-<h2>数学公式</h2>
-<p>$$</p>
-<p>\frac{\partial f}{\partial x} = 2\sqrt{a}x</p>
-<p>$$</p>
-<h2>行内数学公式</h2>
-<p>$\theta=x^2$</p>
-<h2>表格</h2>
-<p>|姓名|年龄|成绩|</p>
-<p>|:---|---:|:---:|</p>
-<p>|张三|19|19|</p>
-<p>|李四|19|19|</p>
-<h2>脚注</h2>
-<p>一键三连<sup><a href="#user-content-fn-%E4%B8%89%E8%BF%9E-0aa9006c82a62abf5193cd126dc59790" id="user-content-fnref-%e4%b8%89%e8%bf%9e-0aa9006c82a62abf5193cd126dc59790" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></p>
-<h2>横线</h2>
-<hr>
-<h2>链接</h2>
-<p><a href="baidu.com" title="一个垃圾的搜索引擎">百度</a></p>
-<h2>引用链接</h2>
-<p><a href="baidu.com" title="一个垃圾的搜索引擎">百度</a></p>
-<p><a href="Google.com" title="一个还可以的搜索引擎">谷歌</a></p>
-<h2>链接设置到标题</h2>
-<p>请参考<a href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98">标题</a></p>
-<h2>URL</h2>
-<p><a href="http://www.baidu.com" rel="nofollow">http://www.baidu.com</a></p>
-<h2>图片</h2>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e424673edf6e91dd6c73281fc7faa88cb486d64d774c35d14ec07b88f0d1946a/68747470733a2f2f7777772e62616964752e636f6d2f696d672f5043746d5f64396338373530626564306233633764303839666137643535373230643663662e706e67"><img src="https://camo.githubusercontent.com/e424673edf6e91dd6c73281fc7faa88cb486d64d774c35d14ec07b88f0d1946a/68747470733a2f2f7777772e62616964752e636f6d2f696d672f5043746d5f64396338373530626564306233633764303839666137643535373230643663662e706e67" alt="百度" title="百度搜索" data-canonical-src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" style="max-width: 100%;"></a></p>
-<p>如果是本地地址那么可以写<strong>本地图片的相对地址或者绝对地址</strong></p>
-<p>![本地图片](c:\Users\Public\Pictures\Sample Pictures\八仙花.jpg "百度搜索")</p>
-<p><strong>本地地址未成功</strong></p>
-<h2>斜体</h2>
-<p><em>斜体</em></p>
-<h2>加粗</h2>
-<p><strong>加粗</strong></p>
-<h2>行内代码</h2>
-<p><code class="notranslate">printf()</code></p>
-<h2>下划线</h2>
-<p>下划线</p>
-<h2>标准的表情符号</h2>
-<p>😄</p>
-<blockquote>
-<p><a href="https://unicode.org/emoji/charts/full-emoji-list.html" rel="nofollow">https://unicode.org/emoji/charts/full-emoji-list.html</a></p>
-</blockquote>
-<h2>下标</h2>
-<p>H<del>2</del>O</p>
-<h2>上标</h2>
-<p>X^2^</p>
-<h2>高亮文字</h2>
-<p>==这是一段高亮文字==</p>
-<h2>视频</h2>
-&lt;iframe src="//player.bilibili.com/player.html?aid=327623069&amp;bvid=BV1JA411h7Gw&amp;cid=171385214&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
-<section data-footnotes="" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
-<ol>
-<li id="user-content-fn-%E4%B8%89%E8%BF%9E-0aa9006c82a62abf5193cd126dc59790">
-<p>点赞，投币，收藏。 <a href="#user-content-fnref-%E4%B8%89%E8%BF%9E-0aa9006c82a62abf5193cd126dc59790" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
-</li>
-</ol>
-</section></div>
+<p>sizeof(数据类型)  计算数据类型所占的字节数<br>
+一般前用%lu %zu %zd打印sizeof的结果<br>
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小<br>
+byte 字节   8比特位 = 1字节<br>
+//			   kb         1024byte = 1kb<br>
+//			   mb           1024kb = 1mb<br>
+//		           gb           1024mb = 1gb<br>
+//			     tb           1024gb = 1tb<br>
+//			     pb           1024tb = 1pb<br>
+//			    eb           1024pb = 1eb<br>
+//			     zb           1024eb = 1zb</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -586,6 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-<script>MathJax = {tex: {inlineMath: [["$", "$"]]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 </html>

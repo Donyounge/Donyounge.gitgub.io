@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 05:08:23 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>测试功能</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</link><description># markdown语法
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 22 Feb 2025 08:15:33 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description>#关于 sizeof()函数的使用
+```c
+#include &lt;stdio.h&gt;
+
+int main()
+{
+	printf('%d\n',sizeof(char));              //1    字节
+	printf('%d\n',sizeof(short));             //2
+	printf('%d\n',sizeof(int));               //4
+	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)&gt;=sizeof(int)
+	printf('%d\n',sizeof(long long));         //8
+	printf('%d\n',sizeof(float));             //4
+	printf('%d\n',sizeof(double));            //8
+	printf('%d\n',sizeof(long double));       //12
+
+        return 0；
+}
+```
+sizeof(数据类型)  计算数据类型所占的字节数
+一般前用%lu %zu %zd打印sizeof的结果
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
+	               byte 字节   8比特位 = 1字节 
+//			   kb         1024byte = 1kb
+//			   mb           1024kb = 1mb 
+//		           gb           1024mb = 1gb
+//			     tb           1024gb = 1tb
+//			     pb           1024tb = 1pb
+//			    eb           1024pb = 1eb
+//			     zb           1024eb = 1zb。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</guid><pubDate>Sat, 22 Feb 2025 08:04:10 +0000</pubDate></item><item><title>测试功能</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/ce-shi-gong-neng.html</link><description># markdown语法
 
 
 
