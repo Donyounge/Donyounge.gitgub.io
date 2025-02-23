@@ -239,7 +239,7 @@ byte 字节   8比特位 = 1字节<br>
 <span class="pl-s">"asd"</span>;  <span class="pl-c">//能用肉眼观察到的常量，字符串用的双引号</span></pre></div>
 <h2>const 修饰的常变量</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</span>
-<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量</span></pre></div>
+<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组的[]之中的只能是常量，不可为变量</span></pre></div>
 <h2>define定义的标识符常量</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-c1">MAX</span> 100 //不可被更改
 <span class="pl-k">#define</span> <span class="pl-c1">HHH</span> "sada"
