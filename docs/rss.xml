@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 09:07:16 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 09:08:41 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
@@ -70,8 +70,8 @@ int main()
 	int num2 = 0;
 	int  sum = 0;
 	scanf('%d %d', &amp;num1, &amp;num2);
-	sum = Add(num1, num2)       ;
-	printf('sum=%d\n', sum)     ;
+	sum = Add(num1,num2)       ;
+	printf('sum=%d\n',sum)     ;
 	return 0                    ;
 }
 ```
