@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 09:08:41 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 12:16:55 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
@@ -100,17 +100,20 @@ int main()
 ```c
 int main()
 {
-	int arr[10] = { 0,1,2,3,4,5,6,7,18,9 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+	int arr[10] = { 11,12,13,14,15,16,17,18,19,20 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+//数组初始化，可以不指定其大小，[]中可以不填写内容，它会自动根据后续自行确定存放个数
 	printf('%d\n',arr[8]);                    //打印数组里的第八个元素 
 	int i = 0;
 	while (i &lt; 10)
 	{
-		printf('%d\n', arr[i]);
+		printf('%d\n', arr[i]);  
 		i++;
 	}
 	return 0;
 }
-```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</guid><pubDate>Sun, 23 Feb 2025 08:32:35 +0000</pubDate></item><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description># 关于 sizeof()函数的相关知识
+```
+#3 中提到过[]中不可出现变量，如：
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</guid><pubDate>Sun, 23 Feb 2025 08:32:35 +0000</pubDate></item><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description># 关于 sizeof()函数的相关知识
 ```c
 #include &lt;stdio.h&gt;
 

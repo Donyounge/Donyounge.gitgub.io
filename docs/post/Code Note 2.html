@@ -111,17 +111,20 @@ int main()
 ```c
 int main()
 {
-	int arr[10] = { 0,1,2,3,4,5,6,7,18,9 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+	int arr[10] = { 11,12,13,14,15,16,17,18,19,20 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+//数组初始化，可以不指定其大小，[]中可以不填写内容，它会自动根据后续自行确定存放个数
 	printf('%d\n',arr[8]);                    //打印数组里的第八个元素 
 	int i = 0;
 	while (i < 10)
 	{
-		printf('%d\n', arr[i]);
+		printf('%d\n', arr[i]);  
 		i++;
 	}
 	return 0;
 }
-```。">
+```
+#3 中提到过[]中不可出现变量，如：
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
 <meta property="og:title" content="Code Note 2">
 <meta property="og:description" content="# 实例
 ## 分支选择
@@ -224,17 +227,20 @@ int main()
 ```c
 int main()
 {
-	int arr[10] = { 0,1,2,3,4,5,6,7,18,9 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+	int arr[10] = { 11,12,13,14,15,16,17,18,19,20 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+//数组初始化，可以不指定其大小，[]中可以不填写内容，它会自动根据后续自行确定存放个数
 	printf('%d\n',arr[8]);                    //打印数组里的第八个元素 
 	int i = 0;
 	while (i < 10)
 	{
-		printf('%d\n', arr[i]);
+		printf('%d\n', arr[i]);  
 		i++;
 	}
 	return 0;
 }
-```。">
+```
+#3 中提到过[]中不可出现变量，如：
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -392,15 +398,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h1>数组</h1>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
-	<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span>,<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>,<span class="pl-c1">5</span>,<span class="pl-c1">6</span>,<span class="pl-c1">7</span>,<span class="pl-c1">18</span>,<span class="pl-c1">9</span> };<span class="pl-c">//其实数组里的元素是有隐藏的排序下标的，从0开始</span>
+	<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">11</span>,<span class="pl-c1">12</span>,<span class="pl-c1">13</span>,<span class="pl-c1">14</span>,<span class="pl-c1">15</span>,<span class="pl-c1">16</span>,<span class="pl-c1">17</span>,<span class="pl-c1">18</span>,<span class="pl-c1">19</span>,<span class="pl-c1">20</span> };<span class="pl-c">//其实数组里的元素是有隐藏的排序下标的，从0开始</span>
+<span class="pl-c">//数组初始化，可以不指定其大小，[]中可以不填写内容，它会自动根据后续自行确定存放个数</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-s1">arr</span>[<span class="pl-c1">8</span>]);                    <span class="pl-c">//打印数组里的第八个元素 </span>
 	<span class="pl-smi">int</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>;
 	<span class="pl-k">while</span> (<span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">10</span>)
 	{
-		<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">arr</span>[<span class="pl-s1">i</span>]);
+		<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">arr</span>[<span class="pl-s1">i</span>]);  
 		<span class="pl-s1">i</span><span class="pl-c1">++</span>;
 	}
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<p>#3 中提到过[]中不可出现变量，如：<br>
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。<br>
+int arr[10] = { 0 };//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组的[]之中的只能是常量，不可为变量，此二者有区别注意区分</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{   <span class="pl-smi">char</span> <span class="pl-s1">arr</span>[] <span class="pl-c1">=</span> { <span class="pl-c1">'b'</span>,<span class="pl-c1">'i'</span>,<span class="pl-c1">'t'</span>};
+\\<span class="pl-smi">char</span> <span class="pl-s1">型数组存放的是字符串</span>，<span class="pl-s1">但是后续又没有</span>\<span class="pl-c1">0</span>
+  <span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-en">strlen</span>(<span class="pl-s1">arr</span>));\\<span class="pl-smi">值不为3</span>，<span class="pl-s1">为随机数</span>
+<span class="pl-s1">return</span> <span class="pl-c1">0</span>；
 }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
