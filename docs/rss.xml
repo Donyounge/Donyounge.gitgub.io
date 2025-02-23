@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 08:32:59 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 09:05:35 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
@@ -41,6 +41,72 @@ int	main()
 	else 
 	{
 		printf('不行\n');
+	}
+	return 0;
+}
+```
+## 加法器函数
+```c
+int add(int x, int y) //int为函数的返回值类型
+{int z = 0    ;
+	 z = x + y;
+	 return z ;//z是整数，返回为整数，函数前也要声明为整数
+}
+```
+更加简化的写法
+```c
+/*int add(int x, int y)
+{
+	return (x + y); 更加简化的写法
+}
+```
+使用例
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+int main()
+{
+	int num1 = 0;
+	int num2 = 0;
+	int  sum = 0;
+	scanf('%d %d', &amp;num1, &amp;num2);
+	sum = Add(num1, num2)       ;
+	printf('sum=%d\n', sum)     ;
+	return 0                    ;
+}
+```
+## 比较器
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+ int max(int x,int y)
+ { if (x&gt;y)
+   return x;
+   else
+   return y;
+ }
+int main()
+{    int num1 = 0;
+     int num2 = 0;
+     int     Big = 0;
+    scanf('%d %d',&amp;num1,&amp;num2);
+    Big = max(num1,num2);
+    printf('比较大的是%d\n'，Big);
+    return 0;
+}
+```
+
+# 数组
+```c
+int main()
+{
+	int arr[10] = { 0,1,2,3,4,5,6,7,18,9 };//其实数组里的元素是有隐藏的排序下标的，从0开始
+	printf('%d\n',arr[8]);                    //打印数组里的第八个元素 
+	int i = 0;
+	while (i &lt; 10)
+	{
+		printf('%d\n', arr[i]);
+		i++;
 	}
 	return 0;
 }
