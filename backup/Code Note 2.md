@@ -118,7 +118,7 @@ int arr[10] = { 0 };//创建了一个数组，可以存放10个整型，[]中需
 int main()
 {   char arr[] = { 'b','i','t'};
 \\char 型数组存放的是字符串，但是后续又没有\0
-  printf("%d\n",strlen(arr));\\值不为3，为随机数
+  printf("%s\n",strlen(arr));\\值不为3，为随机数
 return 0；
 }
 ```
