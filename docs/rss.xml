@@ -1,5 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 03:12:47 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description># 关于 sizeof()函数的相关知识
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 23 Feb 2025 08:32:59 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
+## 分支选择
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+int main()
+{
+	int input = 0;
+	printf('偶遇成都经典款胖熊，拼尽全力无法战胜，你的选择是成为(1/0)\n');
+	scanf('%d', &amp;input);
+	
+	if (input == 0)
+	{ 
+		printf('当0\n');
+	}
+	else
+	{
+		printf('当1\n');
+	}
+	return 0;
+}
+```
+## 循环
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+int	main()
+{
+	int line = 0;
+	printf('天天学习\n');
+	while (line&lt;20000) 
+	{  
+		printf('写代码%d\n',line);
+		line++;
+	}
+	if (line &gt;= 20000)
+	{
+		printf('不赖\n');
+	}
+	else 
+	{
+		printf('不行\n');
+	}
+	return 0;
+}
+```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</guid><pubDate>Sun, 23 Feb 2025 08:32:35 +0000</pubDate></item><item><title>Code Note 1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%201.html</link><description># 关于 sizeof()函数的相关知识
 ```c
 #include &lt;stdio.h&gt;
 
