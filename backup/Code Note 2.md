@@ -90,7 +90,7 @@ int main()
      int     Big = 0;
     scanf("%d %d",&num1,&num2);
     Big = max(num1,num2);
-    printf("比较大的是%d\n"，Big);
+    printf("比较大的是%d\n",Big);
     return 0;
 }
 ```
