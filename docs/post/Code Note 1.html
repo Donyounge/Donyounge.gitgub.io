@@ -279,17 +279,16 @@ byte 字节   8比特位 = 1字节<br>
 <span class="pl-c">//	int len  = strlen ("abc");//strlen的参数可以是一个字符串，也可以是一个字符数组</span>
 <span class="pl-c">//	printf("%d\n", len); 3</span></pre></div>
 <h1>转义字符相关</h1>
-<p>##实例</p>
-<pre class="notranslate"><code class="notranslate">#define _CRT_SECURE_NO_WARNINGS
-#include &lt;stdio.h&gt;
-int main()
+<h2>实例</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-s1">_CRT_SECURE_NO_WARNINGS</span>
+<span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
-	//printf("adc\n");          \\输出adc
-	//printf("adc\0adwq"); \\输出adc,\0后的内容不输出
-return 0;
-}
-</code></pre>
-<p>##常见转义字符汇总</p>
+	<span class="pl-c">//printf("adc\n");          \\输出adc</span>
+	<span class="pl-c">//printf("adc\0adwq"); \\输出adc,\0后的内容不输出</span>
+<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h2>常见转义字符汇总</h2>
 <p>? 书写连续多个问号时候使用，防止编译器将其识别为三目运算符 早期编译器中三字母词 ??)--] ??(--[<br>
 \a 警告字符，响铃<br>
 \b 退格<br>
@@ -309,43 +308,41 @@ return 0;
 \r\n windows下的换行符<br>
 \n linux下的换行符<br>
 \r mac下的换行符</p>
-<pre class="notranslate"><code class="notranslate"># 打印使用
-
-%d  十进制有符号整数
-%u  十进制无符号整数
-%o  八进制整数
-%x  十六进制整数
-%f  float浮点数
-%lf double双精度浮点数
-%e  指数形式的浮点数
-%g  指数形式的浮点或小数
-%c  字符
-%s  字符串
-%p  指针的值
-%n  存储已写字符的数量
-%m  打印errno对应的错误信息
-%I[类型]  读取输入的数据
-%*  跳过输入的数据
-%[]  读取输入的数据
-%[^]  读取输入的数据
-%zu  size_t类型
-%zd  ssize_t类型
-%lu  unsigned long类型
-%ld  long类型
-##实例
-include&lt;stdio.h&gt;
-int main()
+<h1>打印使用</h1>
+<p>%d  十进制有符号整数<br>
+%u  十进制无符号整数<br>
+%o  八进制整数<br>
+%x  十六进制整数<br>
+%f  float浮点数<br>
+%lf double双精度浮点数<br>
+%e  指数形式的浮点数<br>
+%g  指数形式的浮点或小数<br>
+%c  字符<br>
+%s  字符串<br>
+%p  指针的值<br>
+%n  存储已写字符的数量<br>
+%m  打印errno对应的错误信息<br>
+%I[类型]  读取输入的数据<br>
+%*  跳过输入的数据<br>
+%[]  读取输入的数据<br>
+%[^]  读取输入的数据<br>
+%zu  size_t类型<br>
+%zd  ssize_t类型<br>
+%lu  unsigned long类型<br>
+%ld  long类型<br>
+##实例</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-s1">include</span><span class="pl-c1">&lt;</span><span class="pl-s1">stdio</span>.<span class="pl-c1">h</span><span class="pl-c1">&gt;</span>
+<span class="pl-s1">int</span> <span class="pl-en">main</span>()
 {
-	printf("asdd\n");//只有字符串和单个字符可以这样打印，其余都需要按下面的方式打印
-	//printf("%s\n","asdd");\\标准格式
-	printf("\a");\\响铃
-	printf("%c\n", '\130');// \130是八进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X
-	printf("%c\n", '\x58');// \x58是十六进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X
-	printf("%c\n", 'X');
-	printf("%d\n",strlen("qw ert"));//加了空格，所以除了\0是六个字符\\6
-	return 0;
-}
-</code></pre></div>
+	<span class="pl-en">printf</span>(<span class="pl-s">"asdd\n"</span>)<span class="pl-c1"></span>;<span class="pl-c">//只有字符串和单个字符可以这样打印，其余都需要按下面的方式打印</span>
+	<span class="pl-c">//printf("%s\n","asdd");\\标准格式</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"\a"</span>);\\<span class="pl-smi">响铃</span>
+	<span class="pl-s1">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\130'</span>);<span class="pl-c">// \130是八进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\x58'</span>);<span class="pl-c">// \x58是十六进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'X'</span>);
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-en">strlen</span>(<span class="pl-s">"qw ert"</span>));<span class="pl-c">//加了空格，所以除了\0是六个字符\\6</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
