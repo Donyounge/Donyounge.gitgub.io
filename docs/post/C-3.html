@@ -164,7 +164,91 @@ int main()
 	printf('%d\n', a);//3
 	return 0;
 }
-```。">
+```
+# 关系操作符 
+## >  <  >=  <=  ==  !=
+```c
+int main()
+{
+	int a = 10;
+	if (a == 1) //===是关系操作符，判断是否相等,相等为真非0，不等为假0
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+
+	return 0;
+}
+```
+# 逻辑操作符
+## &&  ||  ! 与或非
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a > 5 && b > 15)//&&逻辑与，两边都为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a  && b )
+		//&&逻辑与，两边都为真，结果为真
+		//a和b都是非零，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	if (a > 5 || b > 15)//||逻辑或，两边有一个为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;
+}
+```
+# 条件操作符
+## 表达式1?表达式2:表达式3（三目操作符）如果表达式1为真，执行表达式2，否则执行表达式3
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = 0;
+	c = a > b ? a : b;
+	printf('%d\n', c);
+	return 0;
+}
+```
+。">
 <meta property="og:title" content="C-3">
 <meta property="og:description" content="0--数字0
 ’0‘--字符0--ASCII值为48
@@ -320,7 +404,91 @@ int main()
 	printf('%d\n', a);//3
 	return 0;
 }
-```。">
+```
+# 关系操作符 
+## >  <  >=  <=  ==  !=
+```c
+int main()
+{
+	int a = 10;
+	if (a == 1) //===是关系操作符，判断是否相等,相等为真非0，不等为假0
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+
+	return 0;
+}
+```
+# 逻辑操作符
+## &&  ||  ! 与或非
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a > 5 && b > 15)//&&逻辑与，两边都为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a  && b )
+		//&&逻辑与，两边都为真，结果为真
+		//a和b都是非零，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	if (a > 5 || b > 15)//||逻辑或，两边有一个为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;
+}
+```
+# 条件操作符
+## 表达式1?表达式2:表达式3（三目操作符）如果表达式1为真，执行表达式2，否则执行表达式3
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = 0;
+	c = a > b ? a : b;
+	printf('%d\n', c);
+	return 0;
+}
+```
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -522,6 +690,79 @@ sizeof   操作数的类型长度<br>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">a</span>);<span class="pl-c">//3</span>
 	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> (<span class="pl-smi">int</span>)<span class="pl-c1">3.14</span>;
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">a</span>);<span class="pl-c">//3</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h1>关系操作符</h1>
+<h2>&gt;  &lt;  &gt;=  &lt;=  ==  !=</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-k">if</span> (<span class="pl-s1">a</span> <span class="pl-c1">==</span> <span class="pl-c1">1</span>) <span class="pl-c">//===是关系操作符，判断是否相等,相等为真非0，不等为假0</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"hehe\n"</span>);
+	}
+	<span class="pl-k">else</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"haha\n"</span>);
+	}
+
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h1>逻辑操作符</h1>
+<h2>&amp;&amp;  ||  ! 与或非</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{ 
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-k">if</span> (<span class="pl-s1">a</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">5</span> <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">b</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">15</span>)<span class="pl-c">//&amp;&amp;逻辑与，两边都为真，结果为真</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"hehe\n"</span>);
+	}
+	<span class="pl-k">else</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"haha\n"</span>);
+	}
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;	  
+}</pre></div>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{ 
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-k">if</span> (<span class="pl-s1">a</span>  <span class="pl-c1">&amp;&amp;</span> <span class="pl-s1">b</span> )
+		<span class="pl-c">//&amp;&amp;逻辑与，两边都为真，结果为真</span>
+		<span class="pl-c">//a和b都是非零，结果为真</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"hehe\n"</span>);
+	}
+	<span class="pl-k">else</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"haha\n"</span>);
+	}
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;	  
+}</pre></div>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-k">if</span> (<span class="pl-s1">a</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">5</span> <span class="pl-c1">||</span> <span class="pl-s1">b</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">15</span>)<span class="pl-c">//||逻辑或，两边有一个为真，结果为真</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"hehe\n"</span>);
+	}
+	<span class="pl-k">else</span>
+	{
+		<span class="pl-en">printf</span>(<span class="pl-s">"haha\n"</span>);
+	}
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h1>条件操作符</h1>
+<h2>表达式1?表达式2:表达式3（三目操作符）如果表达式1为真，执行表达式2，否则执行表达式3</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>;
+	<span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-s1">a</span> <span class="pl-c1">&gt;</span> <span class="pl-s1">b</span> ? <span class="pl-s1">a</span> : <span class="pl-s1">b</span>;
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">c</span>);
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

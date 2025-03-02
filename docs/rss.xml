@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 15:09:54 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 17:08:09 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
 ’0‘--字符0--ASCII值为48
 \0--字符--ASCII值为0
 EOF-- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义
@@ -153,7 +153,91 @@ int main()
 	printf('%d\n', a);//3
 	return 0;
 }
-```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>C-2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.html</link><description># 实例
+```
+# 关系操作符 
+## &gt;  &lt;  &gt;=  &lt;=  ==  !=
+```c
+int main()
+{
+	int a = 10;
+	if (a == 1) //===是关系操作符，判断是否相等,相等为真非0，不等为假0
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+
+	return 0;
+}
+```
+# 逻辑操作符
+## &amp;&amp;  ||  ! 与或非
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a &gt; 5 &amp;&amp; b &gt; 15)//&amp;&amp;逻辑与，两边都为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{ 
+	int a = 10;
+	int b = 20;
+	if (a  &amp;&amp; b )
+		//&amp;&amp;逻辑与，两边都为真，结果为真
+		//a和b都是非零，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;	  
+}
+```
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	if (a &gt; 5 || b &gt; 15)//||逻辑或，两边有一个为真，结果为真
+	{
+		printf('hehe\n');
+	}
+	else
+	{
+		printf('haha\n');
+	}
+	return 0;
+}
+```
+# 条件操作符
+## 表达式1?表达式2:表达式3（三目操作符）如果表达式1为真，执行表达式2，否则执行表达式3
+```c
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = 0;
+	c = a &gt; b ? a : b;
+	printf('%d\n', c);
+	return 0;
+}
+```
+。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>C-2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
