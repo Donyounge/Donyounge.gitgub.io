@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 15:05:46 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 15:06:16 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
 # 关于ASCII的实例*2
 输入ASCII码值，输出对应字符
 ```c
@@ -70,14 +70,13 @@ a%b;
 有两个参数参与、
 # 单目操作符
   !        逻辑反操作
-  -        负值
-  +        正值
+正负号+-
 &amp;        取地址
 sizeof   操作数的类型长度
 ~        对一个数的二进制按位取反
 --       前置、后置--
 ++       前置、后置++
-*        间接访问操作符（解引用操作符）
+间接访问操作符（解引用操作符）*
 (类型)   强制类型转换
 ## 相关实例 ！
 ```c
@@ -85,7 +84,7 @@ sizeof   操作数的类型长度
  int main()
 {
 	int  flag = 1;
-	if (!flag)//flag为0，取反为1，所以为真
+	if (!flag)//flag为1，取反为0，所以为假
 	{
 		printf('hehe\n');
 	}
@@ -98,6 +97,8 @@ sizeof   操作数的类型长度
 }
 
 ```
+if()若括号中为真，非零，执行if下{}中语句
+    若括号中为假，即零，执行其他
 ## 相关实例 size of #3 相关size of
 ```c
 int main()
@@ -135,6 +136,7 @@ int main()
 	printf('%d\n', b);
 	printf('%d\n', a);
 	return 0;
+}
 ```
 ## 相关实例 强制类型转换
 ```c

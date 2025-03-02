@@ -81,14 +81,13 @@ a%b;
 有两个参数参与、
 # 单目操作符
   !        逻辑反操作
-  -        负值
-  +        正值
+正负号+-
 &        取地址
 sizeof   操作数的类型长度
 ~        对一个数的二进制按位取反
 --       前置、后置--
 ++       前置、后置++
-*        间接访问操作符（解引用操作符）
+间接访问操作符（解引用操作符）*
 (类型)   强制类型转换
 ## 相关实例 ！
 ```c
@@ -96,7 +95,7 @@ sizeof   操作数的类型长度
  int main()
 {
 	int  flag = 1;
-	if (!flag)//flag为0，取反为1，所以为真
+	if (!flag)//flag为1，取反为0，所以为假
 	{
 		printf('hehe\n');
 	}
@@ -109,6 +108,8 @@ sizeof   操作数的类型长度
 }
 
 ```
+if()若括号中为真，非零，执行if下{}中语句
+    若括号中为假，即零，执行其他
 ## 相关实例 size of #3 相关size of
 ```c
 int main()
@@ -146,6 +147,7 @@ int main()
 	printf('%d\n', b);
 	printf('%d\n', a);
 	return 0;
+}
 ```
 ## 相关实例 强制类型转换
 ```c
@@ -231,14 +233,13 @@ a%b;
 有两个参数参与、
 # 单目操作符
   !        逻辑反操作
-  -        负值
-  +        正值
+正负号+-
 &        取地址
 sizeof   操作数的类型长度
 ~        对一个数的二进制按位取反
 --       前置、后置--
 ++       前置、后置++
-*        间接访问操作符（解引用操作符）
+间接访问操作符（解引用操作符）*
 (类型)   强制类型转换
 ## 相关实例 ！
 ```c
@@ -246,7 +247,7 @@ sizeof   操作数的类型长度
  int main()
 {
 	int  flag = 1;
-	if (!flag)//flag为0，取反为1，所以为真
+	if (!flag)//flag为1，取反为0，所以为假
 	{
 		printf('hehe\n');
 	}
@@ -259,6 +260,8 @@ sizeof   操作数的类型长度
 }
 
 ```
+if()若括号中为真，非零，执行if下{}中语句
+    若括号中为假，即零，执行其他
 ## 相关实例 size of #3 相关size of
 ```c
 int main()
@@ -296,6 +299,7 @@ int main()
 	printf('%d\n', b);
 	printf('%d\n', a);
 	return 0;
+}
 ```
 ## 相关实例 强制类型转换
 ```c
@@ -438,37 +442,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">a</span>%<span class="pl-s1">b</span>;</pre></div>
 <p>有两个参数参与、</p>
 <h1>单目操作符</h1>
-<p>!        逻辑反操作</p>
-<ul>
-<li>
-<pre class="notranslate"><code class="notranslate">   负值
-</code></pre>
-</li>
-</ul>
-<ul>
-<li>
-<pre class="notranslate"><code class="notranslate">   正值
-</code></pre>
-</li>
-</ul>
-<p>&amp;        取地址<br>
+<p>!        逻辑反操作<br>
+正负号+-<br>
+&amp;        取地址<br>
 sizeof   操作数的类型长度<br>
 ~        对一个数的二进制按位取反<br>
 --       前置、后置--<br>
-++       前置、后置++</p>
-<ul>
-<li>
-<pre class="notranslate"><code class="notranslate">   间接访问操作符（解引用操作符）
-</code></pre>
-</li>
-</ul>
-<p>(类型)   强制类型转换</p>
+++       前置、后置++<br>
+间接访问操作符（解引用操作符）*<br>
+(类型)   强制类型转换</p>
 <h2>相关实例 ！</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate">\\<span class="pl-smi">C语言中</span>  <span class="pl-c1">0</span><span class="pl-s1">表示假</span>  <span class="pl-s1">非零表示真</span>
  <span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
 	<span class="pl-smi">int</span>  <span class="pl-s1">flag</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>;
-	<span class="pl-k">if</span> (!<span class="pl-s1">flag</span>)<span class="pl-c">//flag为0，取反为1，所以为真</span>
+	<span class="pl-k">if</span> (!<span class="pl-s1">flag</span>)<span class="pl-c">//flag为1，取反为0，所以为假</span>
 	{
 		<span class="pl-en">printf</span>(<span class="pl-s">"hehe\n"</span>);
 	}
@@ -479,6 +467,8 @@ sizeof   操作数的类型长度<br>
 
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div>
+<p>if()若括号中为真，非零，执行if下{}中语句<br>
+若括号中为假，即零，执行其他</p>
 <h2>相关实例 size of #3 相关size of</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
@@ -511,7 +501,8 @@ sizeof   操作数的类型长度<br>
 
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">b</span>);
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">a</span>);
-	<span class="pl-k">return</span> <span class="pl-c1">0</span>;</pre></div>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h2>相关实例 强制类型转换</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
