@@ -121,7 +121,7 @@ int main()
 	int a = 10;
 	printf('%d\n', sizeof(a));   //4
 	printf('%d\n', sizeof (int));//4 
-	printf('%d\n', sizeof a);    //4
+	printf('%d\n', sizeof a);    //4  sizeof 后直接加a未加括号也可以正常运行，更证明了sizeof是操作符而非函数
 	int arr[10] = { 0 };
 	printf('%d\n', sizeof(arr));//40,是整个数组的大小，数组中有10个元素，每个元素是4个字节
 	printf('%d\n', sizeof(arr[0]));//4,是数组中第一个元素的大小
@@ -387,7 +387,7 @@ int main()
 	int a = 10;
 	printf('%d\n', sizeof(a));   //4
 	printf('%d\n', sizeof (int));//4 
-	printf('%d\n', sizeof a);    //4
+	printf('%d\n', sizeof a);    //4  sizeof 后直接加a未加括号也可以正常运行，更证明了sizeof是操作符而非函数
 	int arr[10] = { 0 };
 	printf('%d\n', sizeof(arr));//40,是整个数组的大小，数组中有10个元素，每个元素是4个字节
 	printf('%d\n', sizeof(arr[0]));//4,是数组中第一个元素的大小
@@ -706,7 +706,7 @@ sizeof   操作数的类型长度<br>
 	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-s1">a</span>));   <span class="pl-c">//4</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span> (<span class="pl-smi">int</span>));<span class="pl-c">//4 </span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span> <span class="pl-s1">a</span>);    <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span> <span class="pl-s1">a</span>);    <span class="pl-c">//4  sizeof 后直接加a未加括号也可以正常运行，更证明了sizeof是操作符而非函数</span>
 	<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-s1">arr</span>));<span class="pl-c">//40,是整个数组的大小，数组中有10个元素，每个元素是4个字节</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-s1">arr</span>[<span class="pl-c1">0</span>]));<span class="pl-c">//4,是数组中第一个元素的大小</span>
