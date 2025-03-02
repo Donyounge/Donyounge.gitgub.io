@@ -127,7 +127,7 @@ int main()
 const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性
 int arr[10];//创建了一个可以存放10个整形的数组，此时左侧[]中的10不可省略，但是可以替换成a
 int arr[10] = { 0 };//创建了一个可以存放10个整形的数组，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组初始化时的[]之中的只能是常量，不可为变量
-但后续程序中printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
+printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
 int arr[]={1,2,3};此时左侧[]中可以不写数组大小，会根据右侧自动确认大小
 ```c
 int main()
@@ -262,7 +262,7 @@ int main()
 const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性
 int arr[10];//创建了一个可以存放10个整形的数组，此时左侧[]中的10不可省略，但是可以替换成a
 int arr[10] = { 0 };//创建了一个可以存放10个整形的数组，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组初始化时的[]之中的只能是常量，不可为变量
-但后续程序中printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
+printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
 int arr[]={1,2,3};此时左侧[]中可以不写数组大小，会根据右侧自动确认大小
 ```c
 int main()
@@ -451,7 +451,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性<br>
 int arr[10];//创建了一个可以存放10个整形的数组，此时左侧[]中的10不可省略，但是可以替换成a<br>
 int arr[10] = { 0 };//创建了一个可以存放10个整形的数组，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组初始化时的[]之中的只能是常量，不可为变量<br>
-但后续程序中printf("%d\n", arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素<br>
+printf("%d\n", arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素<br>
 int arr[]={1,2,3};此时左侧[]中可以不写数组大小，会根据右侧自动确认大小</p>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {   <span class="pl-smi">char</span> <span class="pl-s1">arr</span>[] <span class="pl-c1">=</span> { <span class="pl-c1">'b'</span>,<span class="pl-c1">'i'</span>,<span class="pl-c1">'t'</span>};

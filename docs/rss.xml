@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 15:05:15 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 15:05:46 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
 # 关于ASCII的实例*2
 输入ASCII码值，输出对应字符
 ```c
@@ -264,7 +264,7 @@ int main()
 const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性
 int arr[10];//创建了一个可以存放10个整形的数组，此时左侧[]中的10不可省略，但是可以替换成a
 int arr[10] = { 0 };//创建了一个可以存放10个整形的数组，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组初始化时的[]之中的只能是常量，不可为变量
-但后续程序中printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
+printf('%d\n', arr[i]); 是正确的写法，表示输出数组arr中下标为i的元素
 int arr[]={1,2,3};此时左侧[]中可以不写数组大小，会根据右侧自动确认大小
 ```c
 int main()
