@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 17:08:09 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 17:11:44 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
 ’0‘--字符0--ASCII值为48
 \0--字符--ASCII值为0
 EOF-- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义
@@ -234,10 +234,36 @@ int main()
 	int c = 0;
 	c = a &gt; b ? a : b;
 	printf('%d\n', c);
+	return 0; 
+}
+```
+# 下标引用操作符 [ ]
+```c
+int main()
+{
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	arr[3] ;//[ ]就是下标引用操作符，用来访问数组中的元素，arr和3之间的[]的操作数
+	int n = 3;
+	arr[n] = 100;//n是变量，可以改变，arr[n]是数组中的第n个元素
 	return 0;
 }
 ```
-。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>C-2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.html</link><description># 实例
+# 函数调用操作符
+```c
+int Add(int x, int y)
+{
+	return x+y;
+}
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = Add(a, b);//Add后的(),就是函数调用操作符，用来调用函数,Add,a,b都是操作数
+	printf('%d\n', sum);
+	return 0;
+}
+```
+# -&gt;  指针成员访问操作符 此处不做讲解。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>C-2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
