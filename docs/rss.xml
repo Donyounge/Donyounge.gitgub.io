@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 14:02:01 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>Code Note 3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%203.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 14:02:32 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
 # 关于ASCII的实例*2
 输入ASCII码值，输出对应字符
 ```c
@@ -147,7 +147,7 @@ int main()
 	printf('%d\n', a);//3
 	return 0;
 }
-```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%203.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
+```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</guid><pubDate>Mon, 24 Feb 2025 16:50:21 +0000</pubDate></item><item><title>Code Note 2</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</link><description># 实例
 ## 分支选择
 ```c
 #define _CRT_SECURE_NO_WARNINGS
