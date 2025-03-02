@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 14:02:32 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sun, 02 Mar 2025 14:45:53 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>**EOF- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义**
 # 关于ASCII的实例*2
 输入ASCII码值，输出对应字符
 ```c
@@ -261,38 +261,44 @@ int main()
 }
 ```
 #3 中提到过[]中不可出现变量，如：
-const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</guid><pubDate>Sun, 23 Feb 2025 08:32:35 +0000</pubDate></item><item><title>C-1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.html</link><description># 关于 sizeof()函数的相关知识
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/Code%20Note%202.html</guid><pubDate>Sun, 23 Feb 2025 08:32:35 +0000</pubDate></item><item><title>C-1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.html</link><description># 变量类型
 ```c
 #include &lt;stdio.h&gt;
 
 int main()
 {
-	printf('%d\n',sizeof(char));              //1    字节
-	printf('%d\n',sizeof(short));             //2
-	printf('%d\n',sizeof(int));               //4
-	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)&gt;=sizeof(int)
-	printf('%d\n',sizeof(long long));         //8
-	printf('%d\n',sizeof(float));             //4
-	printf('%d\n',sizeof(double));            //8
-	printf('%d\n',sizeof(long double));       //12
+	printf('%zu\n',sizeof(char));              //1    字节
+	printf('%zu\n',sizeof(short));             //2
+	printf('%zu\n',sizeof(int));               //4
+	printf('%zu\n',sizeof(long));              //4         C语言规定sizeof(long)&gt;=sizeof(int)
+	printf('%zu\n',sizeof(long long));         //8
+	printf('%zu\n',sizeof(float));             //4
+	printf('%zu\n',sizeof(double));            //8
+	printf('%zu\n',sizeof(long double));       //12
 
         return 0；
 }
 ```
 sizeof(数据类型)  计算数据类型所占的字节数
-一般前用%lu %zu %zd打印sizeof的结果
+一般前用：
+%zu(无符号)/%zd(有符号)
+打印sizeof的结果
+其余sizeof相关内容见 
+#5 
+# 内存单位
 
 计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
 	               byte 字节   8比特位 = 1字节 
-//			   kb         1024byte = 1kb
-//			   mb           1024kb = 1mb 
-//		           gb           1024mb = 1gb
-//			     tb           1024gb = 1tb
-//			     pb           1024tb = 1pb
-//			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb
+			   kb         1024byte = 1kb
+			   mb           1024kb = 1mb 
+		           gb           1024mb = 1gb
+			     tb           1024gb = 1tb
+			     pb           1024tb = 1pb
+			    eb           1024pb = 1eb
+			     zb           1024eb = 1zb
 ---
-# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+# 关于关键字extern的实例
+同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
 ## 源文件1
 ```c
 int d = 22；
@@ -307,6 +313,7 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
+
 ## 字面常量
 ```c
 30   ;  //字面常量

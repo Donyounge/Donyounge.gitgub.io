@@ -10,38 +10,44 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 关于 sizeof()函数的相关知识
+<meta name="description" content="# 变量类型
 ```c
 #include <stdio.h>
 
 int main()
 {
-	printf('%d\n',sizeof(char));              //1    字节
-	printf('%d\n',sizeof(short));             //2
-	printf('%d\n',sizeof(int));               //4
-	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
-	printf('%d\n',sizeof(long long));         //8
-	printf('%d\n',sizeof(float));             //4
-	printf('%d\n',sizeof(double));            //8
-	printf('%d\n',sizeof(long double));       //12
+	printf('%zu\n',sizeof(char));              //1    字节
+	printf('%zu\n',sizeof(short));             //2
+	printf('%zu\n',sizeof(int));               //4
+	printf('%zu\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%zu\n',sizeof(long long));         //8
+	printf('%zu\n',sizeof(float));             //4
+	printf('%zu\n',sizeof(double));            //8
+	printf('%zu\n',sizeof(long double));       //12
 
         return 0；
 }
 ```
 sizeof(数据类型)  计算数据类型所占的字节数
-一般前用%lu %zu %zd打印sizeof的结果
+一般前用：
+%zu(无符号)/%zd(有符号)
+打印sizeof的结果
+其余sizeof相关内容见 
+#5 
+# 内存单位
 
 计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
 	               byte 字节   8比特位 = 1字节 
-//			   kb         1024byte = 1kb
-//			   mb           1024kb = 1mb 
-//		           gb           1024mb = 1gb
-//			     tb           1024gb = 1tb
-//			     pb           1024tb = 1pb
-//			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb
+			   kb         1024byte = 1kb
+			   mb           1024kb = 1mb 
+		           gb           1024mb = 1gb
+			     tb           1024gb = 1tb
+			     pb           1024tb = 1pb
+			    eb           1024pb = 1eb
+			     zb           1024eb = 1zb
 ---
-# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+# 关于关键字extern的实例
+同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
 ## 源文件1
 ```c
 int d = 22；
@@ -56,6 +62,7 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
+
 ## 字面常量
 ```c
 30   ;  //字面常量
@@ -67,38 +74,44 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 ```c
 const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
 <meta property="og:title" content="C-1">
-<meta property="og:description" content="# 关于 sizeof()函数的相关知识
+<meta property="og:description" content="# 变量类型
 ```c
 #include <stdio.h>
 
 int main()
 {
-	printf('%d\n',sizeof(char));              //1    字节
-	printf('%d\n',sizeof(short));             //2
-	printf('%d\n',sizeof(int));               //4
-	printf('%d\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
-	printf('%d\n',sizeof(long long));         //8
-	printf('%d\n',sizeof(float));             //4
-	printf('%d\n',sizeof(double));            //8
-	printf('%d\n',sizeof(long double));       //12
+	printf('%zu\n',sizeof(char));              //1    字节
+	printf('%zu\n',sizeof(short));             //2
+	printf('%zu\n',sizeof(int));               //4
+	printf('%zu\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%zu\n',sizeof(long long));         //8
+	printf('%zu\n',sizeof(float));             //4
+	printf('%zu\n',sizeof(double));            //8
+	printf('%zu\n',sizeof(long double));       //12
 
         return 0；
 }
 ```
 sizeof(数据类型)  计算数据类型所占的字节数
-一般前用%lu %zu %zd打印sizeof的结果
+一般前用：
+%zu(无符号)/%zd(有符号)
+打印sizeof的结果
+其余sizeof相关内容见 
+#5 
+# 内存单位
 
 计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
 	               byte 字节   8比特位 = 1字节 
-//			   kb         1024byte = 1kb
-//			   mb           1024kb = 1mb 
-//		           gb           1024mb = 1gb
-//			     tb           1024gb = 1tb
-//			     pb           1024tb = 1pb
-//			    eb           1024pb = 1eb
-//			     zb           1024eb = 1zb
+			   kb         1024byte = 1kb
+			   mb           1024kb = 1mb 
+		           gb           1024mb = 1gb
+			     tb           1024gb = 1tb
+			     pb           1024tb = 1pb
+			    eb           1024pb = 1eb
+			     zb           1024eb = 1zb
 ---
-# 同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+# 关于关键字extern的实例
+同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
 ## 源文件1
 ```c
 int d = 22；
@@ -113,6 +126,7 @@ extern int d；\\声明了一个变量d，类型为int,来自外部文件的全�
 2. const修饰的常变量
 3. define定义的标识符常量
 4. 枚举常量
+
 ## 字面常量
 ```c
 30   ;  //字面常量
@@ -193,34 +207,40 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>关于 sizeof()函数的相关知识</h1>
+<div class="markdown-body" id="postBody"><h1>变量类型</h1>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
 
 <span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">char</span>));              <span class="pl-c">//1    字节</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">short</span>));             <span class="pl-c">//2</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">int</span>));               <span class="pl-c">//4</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long</span>));              <span class="pl-c">//4         C语言规定sizeof(long)&gt;=sizeof(int)</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long long</span>));         <span class="pl-c">//8</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">float</span>));             <span class="pl-c">//4</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">double</span>));            <span class="pl-c">//8</span>
-	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long <span class="pl-smi">double</span></span>));       <span class="pl-c">//12</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">char</span>));              <span class="pl-c">//1    字节</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">short</span>));             <span class="pl-c">//2</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">int</span>));               <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long</span>));              <span class="pl-c">//4         C语言规定sizeof(long)&gt;=sizeof(int)</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long long</span>));         <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">float</span>));             <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">double</span>));            <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long <span class="pl-smi">double</span></span>));       <span class="pl-c">//12</span>
 
         <span class="pl-k">return</span> <span class="pl-c1">0</span>；
 }</pre></div>
 <p>sizeof(数据类型)  计算数据类型所占的字节数<br>
-一般前用%lu %zu %zd打印sizeof的结果</p>
+一般前用：<br>
+%zu(无符号)/%zd(有符号)<br>
+打印sizeof的结果<br>
+其余sizeof相关内容见<br>
+#5</p>
+<h1>内存单位</h1>
 <h2>计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小<br>
 byte 字节   8比特位 = 1字节<br>
-//			   kb         1024byte = 1kb<br>
-//			   mb           1024kb = 1mb<br>
-//		           gb           1024mb = 1gb<br>
-//			     tb           1024gb = 1tb<br>
-//			     pb           1024tb = 1pb<br>
-//			    eb           1024pb = 1eb<br>
-//			     zb           1024eb = 1zb</h2>
-<h1>同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：</h1>
+kb         1024byte = 1kb<br>
+mb           1024kb = 1mb<br>
+gb           1024mb = 1gb<br>
+tb           1024gb = 1tb<br>
+pb           1024tb = 1pb<br>
+eb           1024pb = 1eb<br>
+zb           1024eb = 1zb</h2>
+<h1>关于关键字extern的实例</h1>
+<p>同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：</p>
 <h2>源文件1</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-s1">d</span> <span class="pl-c1">=</span> <span class="pl-c1">22</span>；</pre></div>
 <h2>源文件2</h2>
@@ -239,7 +259,7 @@ byte 字节   8比特位 = 1字节<br>
 <span class="pl-s">"asd"</span>;  <span class="pl-c">//能用肉眼观察到的常量，字符串用的双引号</span></pre></div>
 <h2>const 修饰的常变量</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</span>
-<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，[]中需要输入一个常量，但是上述的a不可替代10，a本质还是变量,数组的[]之中的只能是常量，不可为变量</span></pre></div>
+<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，需要输入一个常量，但是上述的a不可替代10</span></pre></div>
 <h2>define定义的标识符常量</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-c1">MAX</span> 100 //不可被更改
 <span class="pl-k">#define</span> <span class="pl-c1">HHH</span> "sada"
@@ -259,19 +279,20 @@ byte 字节   8比特位 = 1字节<br>
 	};
 <span class="pl-k">enum</span> <span class="pl-smi">Color</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-c1">RED</span>;
 <span class="pl-k">enum</span> <span class="pl-smi">SEX</span>
-	{<span class="pl-s1">Male</span>,
+	{
+         <span class="pl-s1">Male</span>,
 	 <span class="pl-s1">Female</span>,
-	 <span class="pl-c1">SECRET</span>
+	 <span class="pl-s1">Secret</span>
          };  </pre></div>
 <h2>枚举常量先进行内容的定义列举，之后再调用枚举常量时所定义的常量的形式只能从枚举的内容中定义<br>
 例如 enum SEX x=1 是不允许的</h2>
-<h1>字符相关</h1>
+<h1>字符与字符串相关</h1>
 <p>#include &lt;string.h&gt;是包含字符串处理函数的头文件。这个头文件定义了多种操作字符数组的函数，如strlen（求字符串长度）、strcmp（比较两个字符串是否相同）、strcpy（字符串拷贝操作）、strcat（字符串连接操作）等</p>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">char</span> <span class="pl-s1">ch</span> <span class="pl-c1">=</span> <span class="pl-c1">'w'</span>;  \\<span class="pl-s1">单个字符用</span>‘’
 <span class="pl-smi">char</span> <span class="pl-s1">sh</span> <span class="pl-c1">=</span> <span class="pl-s">"adad"</span>;\\<span class="pl-s1">字符串用</span>“”
 <span class="pl-smi">char</span> <span class="pl-s1">arr1</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> <span class="pl-s">"affdfe"</span>;<span class="pl-c">//arr1后面的[]中的内容是字符串，字符串的结尾有一个\0，所以arr[10]中只能存放9个字符,也可以不写[]中的内容，长度由字符串的长度决定</span></pre></div>
-<p>F10进入调试模式，程序通过F10逐行运行，将程序运行到return0后观察各个字符串的储存情况</p>
-<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">char</span> <span class="pl-s1">arr2</span>[] <span class="pl-c1">=</span> { <span class="pl-c1">'a'</span>,<span class="pl-c1">'b'</span>,<span class="pl-c1">'c'</span>,<span class="pl-c1">'d'</span>,<span class="pl-c1">'e'</span>,<span class="pl-c1">'f'</span>};<span class="pl-c">//字符串的结束标志是\0，所以arr2中的字符串没有结束标志，所以arr2中的字符串会被错误输出</span>
+<p>F10进入调试模式，程序通过F10逐行运行，将程序运行到 return0；后进入监视，观察字符串各个字符的的储存情况</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">char</span> <span class="pl-s1">arr2</span>[] <span class="pl-c1">=</span> { <span class="pl-c1">'a'</span>,<span class="pl-c1">'b'</span>,<span class="pl-c1">'c'</span>,<span class="pl-c1">'d'</span>,<span class="pl-c1">'e'</span>,<span class="pl-c1">'f'</span>};<span class="pl-c">//字符串的结束标志是\0，所以arr2中的字符串没有结束标志，所以arr2中的字符串会被错误输出直至找到\0</span>
 <span class="pl-c">//	printf("%s\n", arr1);//abcdef</span>
 <span class="pl-c">//	printf("%s\n", arr2);//错误输出</span>
 <span class="pl-c">//	printf("\0");//\0是字符串的结束标志，所以这里输出的是一个空格</span>
@@ -298,8 +319,8 @@ byte 字节   8比特位 = 1字节<br>
 \t 水平制表符<br>
 \v 垂直制表符<br>
 \ 反斜杠<br>
-' 单引号<br>
-" 双引号<br>
+\' 单引号<br>
+\" 双引号<br>
 \0 空字符<br>
 \ddd 1-3位八进制数所代表的字符<br>
 \xhh 1-2位十六进制数所代表的字符<br>
@@ -326,11 +347,11 @@ byte 字节   8比特位 = 1字节<br>
 %*  跳过输入的数据<br>
 %[]  读取输入的数据<br>
 %[^]  读取输入的数据<br>
-%zu  size_t类型<br>
-%zd  ssize_t类型<br>
+%zu  size_t类型，无符号<br>
+%zd  ssize_t类型，有符号<br>
 %lu  unsigned long类型<br>
-%ld  long类型<br>
-##实例</p>
+%ld  long类型</p>
+<h2>实例</h2>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-s1">include</span><span class="pl-c1">&lt;</span><span class="pl-s1">stdio</span>.<span class="pl-c1">h</span><span class="pl-c1">&gt;</span>
 <span class="pl-s1">int</span> <span class="pl-en">main</span>()
 {
