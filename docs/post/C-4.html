@@ -63,7 +63,89 @@ int main()
      return 0;
 }
 ```
-。">
+# static
+1.修饰局部变量
+2.修饰全局变量
+3.修饰函数
+## 实例--局部变量
+```c
+void test() //有void不返回
+{
+        int a = 1;
+	a++;
+	printf('%d', a);
+}
+int main()
+{
+	int i = 0;
+	while (i < 10)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}
+//结果十个2，a是局部变量，进入它的范围时重新创建，每次都是从1开始，出它的范围时销毁，下次调用又从1开始
+```
+```c
+void test()//void意思不需要返回值
+{
+	static int a = 1;
+	a++;
+	printf('%d ', a);//static修饰局部变量时，局部变量出作用域不销毁，直至程序结束时候才销毁
+	//本质上static修饰局部变量的时候改变了变量的存储位置，存储在静态区，改变了变量的生命周期
+}
+int main()
+{
+	int i = 0;
+	while (i < 10)
+	{
+		test();//调试F10时候想进test函数内部，按F11，进入反汇编观察，发现Line44无汇编代码，即证明执行过程中不会再创建a，会一直使用第一次创建的a，
+//过程中监视发现&a的地址一直未发生变化
+		i++;
+	}
+	return 0;
+}
+结果2到11
+```
+## 关于内存
+/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
+栈区：局部变量
+堆区：动态内存管理 malloc/free new/delete  calloc/realloc
+静态区：全局变量、静态变量，变量直至程序最后销毁
+## 实例--全局变量
+### 源文件1
+int g_val = 2025;//全局变量,具有外部链接属性
+extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量
+int main()
+{ 
+printf('%d\n', g_valp);//2026
+return 0;
+} 
+### 源文件2
+int g_valp = 2026;//全局变量
+static int g_valpx = 2026;
+//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
+# 实例--函数
+### 源文件1
+```c
+extern int add(int x,int y);//声明外部函数
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = add(a, b);
+	printf('sum=%d\n', sum);
+	return 0;
+```
+### 源文件2
+```c
+ Add(int x, int y)
+{
+	return x + y;
+}
+```
+若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用。">
 <meta property="og:title" content="C-4">
 <meta property="og:description" content="# 关键字
 关键字 --C语言中本身内置的，无法自己创造
@@ -118,7 +200,89 @@ int main()
      return 0;
 }
 ```
-。">
+# static
+1.修饰局部变量
+2.修饰全局变量
+3.修饰函数
+## 实例--局部变量
+```c
+void test() //有void不返回
+{
+        int a = 1;
+	a++;
+	printf('%d', a);
+}
+int main()
+{
+	int i = 0;
+	while (i < 10)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}
+//结果十个2，a是局部变量，进入它的范围时重新创建，每次都是从1开始，出它的范围时销毁，下次调用又从1开始
+```
+```c
+void test()//void意思不需要返回值
+{
+	static int a = 1;
+	a++;
+	printf('%d ', a);//static修饰局部变量时，局部变量出作用域不销毁，直至程序结束时候才销毁
+	//本质上static修饰局部变量的时候改变了变量的存储位置，存储在静态区，改变了变量的生命周期
+}
+int main()
+{
+	int i = 0;
+	while (i < 10)
+	{
+		test();//调试F10时候想进test函数内部，按F11，进入反汇编观察，发现Line44无汇编代码，即证明执行过程中不会再创建a，会一直使用第一次创建的a，
+//过程中监视发现&a的地址一直未发生变化
+		i++;
+	}
+	return 0;
+}
+结果2到11
+```
+## 关于内存
+/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
+栈区：局部变量
+堆区：动态内存管理 malloc/free new/delete  calloc/realloc
+静态区：全局变量、静态变量，变量直至程序最后销毁
+## 实例--全局变量
+### 源文件1
+int g_val = 2025;//全局变量,具有外部链接属性
+extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量
+int main()
+{ 
+printf('%d\n', g_valp);//2026
+return 0;
+} 
+### 源文件2
+int g_valp = 2026;//全局变量
+static int g_valpx = 2026;
+//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
+# 实例--函数
+### 源文件1
+```c
+extern int add(int x,int y);//声明外部函数
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = add(a, b);
+	printf('sum=%d\n', sum);
+	return 0;
+```
+### 源文件2
+```c
+ Add(int x, int y)
+{
+	return x + y;
+}
+```
+若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -235,7 +399,82 @@ sizeof</p>
 {   <span class="pl-smi">Node</span> <span class="pl-s1">n1</span>;
 
      <span class="pl-k">return</span> <span class="pl-c1">0</span>;
-}</pre></div></div>
+}</pre></div>
+<h1>static</h1>
+<p>1.修饰局部变量<br>
+2.修饰全局变量<br>
+3.修饰函数</p>
+<h2>实例--局部变量</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">void</span> <span class="pl-en">test</span>() <span class="pl-c">//有void不返回</span>
+{
+        <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>;
+	<span class="pl-s1">a</span><span class="pl-c1">++</span>;
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d"</span>, <span class="pl-s1">a</span>);
+}
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>;
+	<span class="pl-k">while</span> (<span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">10</span>)
+	{
+		<span class="pl-en">test</span>();
+		<span class="pl-s1">i</span><span class="pl-c1">++</span>;
+	}
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}
+<span class="pl-c">//结果十个2，a是局部变量，进入它的范围时重新创建，每次都是从1开始，出它的范围时销毁，下次调用又从1开始</span></pre></div>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">void</span> <span class="pl-en">test</span>()<span class="pl-c">//void意思不需要返回值</span>
+{
+	<span class="pl-k">static</span> <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>;
+	<span class="pl-s1">a</span><span class="pl-c1">++</span>;
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d "</span>, <span class="pl-s1">a</span>);<span class="pl-c">//static修饰局部变量时，局部变量出作用域不销毁，直至程序结束时候才销毁</span>
+	<span class="pl-c">//本质上static修饰局部变量的时候改变了变量的存储位置，存储在静态区，改变了变量的生命周期</span>
+}
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">i</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>;
+	<span class="pl-k">while</span> (<span class="pl-s1">i</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">10</span>)
+	{
+		<span class="pl-en">test</span>();<span class="pl-c">//调试F10时候想进test函数内部，按F11，进入反汇编观察，发现Line44无汇编代码，即证明执行过程中不会再创建a，会一直使用第一次创建的a，</span>
+<span class="pl-c">//过程中监视发现&amp;a的地址一直未发生变化</span>
+		<span class="pl-s1">i</span><span class="pl-c1">++</span>;
+	}
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}
+<span class="pl-s1">结果2到11</span></pre></div>
+<h2>关于内存</h2>
+<p>/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区<br>
+栈区：局部变量<br>
+堆区：动态内存管理 malloc/free new/delete  calloc/realloc<br>
+静态区：全局变量、静态变量，变量直至程序最后销毁</p>
+<h2>实例--全局变量</h2>
+<h3>源文件1</h3>
+<p>int g_val = 2025;//全局变量,具有外部链接属性<br>
+extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量<br>
+int main()<br>
+{<br>
+printf("%d\n", g_valp);//2026<br>
+return 0;<br>
+}</p>
+<h3>源文件2</h3>
+<p>int g_valp = 2026;//全局变量<br>
+static int g_valpx = 2026;<br>
+//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p>
+<h1>实例--函数</h1>
+<h3>源文件1</h3>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">extern</span> <span class="pl-smi">int</span> <span class="pl-en">add</span>(<span class="pl-smi">int</span> <span class="pl-s1">x</span>,<span class="pl-smi">int</span> <span class="pl-s1">y</span>);<span class="pl-c">//声明外部函数</span>
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">sum</span> <span class="pl-c1">=</span> <span class="pl-en">add</span>(<span class="pl-s1">a</span>, <span class="pl-s1">b</span>);
+	<span class="pl-en">printf</span>(<span class="pl-s">"sum=%d\n"</span>, <span class="pl-s1">sum</span>);
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;</pre></div>
+<h3>源文件2</h3>
+<div class="highlight highlight-source-c"><pre class="notranslate"> <span class="pl-s1">Add</span>(<span class="pl-smi">int</span> <span class="pl-s1">x</span>, <span class="pl-s1">int</span> <span class="pl-s1">y</span>)
+{
+	<span class="pl-k">return</span> <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>;
+}</pre></div>
+<p>若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

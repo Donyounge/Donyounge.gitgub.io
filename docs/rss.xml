@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 04:04:26 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-4</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html</link><description># 关键字
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 07:27:33 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-4</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html</link><description># 关键字
 关键字 --C语言中本身内置的，无法自己创造
 数据类型相关：
 int char float double void short long signed unsigned
@@ -52,7 +52,89 @@ int main()
      return 0;
 }
 ```
-。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html</guid><pubDate>Sun, 02 Mar 2025 17:32:24 +0000</pubDate></item><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
+# static
+1.修饰局部变量
+2.修饰全局变量
+3.修饰函数
+## 实例--局部变量
+```c
+void test() //有void不返回
+{
+        int a = 1;
+	a++;
+	printf('%d', a);
+}
+int main()
+{
+	int i = 0;
+	while (i &lt; 10)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}
+//结果十个2，a是局部变量，进入它的范围时重新创建，每次都是从1开始，出它的范围时销毁，下次调用又从1开始
+```
+```c
+void test()//void意思不需要返回值
+{
+	static int a = 1;
+	a++;
+	printf('%d ', a);//static修饰局部变量时，局部变量出作用域不销毁，直至程序结束时候才销毁
+	//本质上static修饰局部变量的时候改变了变量的存储位置，存储在静态区，改变了变量的生命周期
+}
+int main()
+{
+	int i = 0;
+	while (i &lt; 10)
+	{
+		test();//调试F10时候想进test函数内部，按F11，进入反汇编观察，发现Line44无汇编代码，即证明执行过程中不会再创建a，会一直使用第一次创建的a，
+//过程中监视发现&amp;a的地址一直未发生变化
+		i++;
+	}
+	return 0;
+}
+结果2到11
+```
+## 关于内存
+/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
+栈区：局部变量
+堆区：动态内存管理 malloc/free new/delete  calloc/realloc
+静态区：全局变量、静态变量，变量直至程序最后销毁
+## 实例--全局变量
+### 源文件1
+int g_val = 2025;//全局变量,具有外部链接属性
+extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量
+int main()
+{ 
+printf('%d\n', g_valp);//2026
+return 0;
+} 
+### 源文件2
+int g_valp = 2026;//全局变量
+static int g_valpx = 2026;
+//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
+# 实例--函数
+### 源文件1
+```c
+extern int add(int x,int y);//声明外部函数
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = add(a, b);
+	printf('sum=%d\n', sum);
+	return 0;
+```
+### 源文件2
+```c
+ Add(int x, int y)
+{
+	return x + y;
+}
+```
+若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html</guid><pubDate>Sun, 02 Mar 2025 17:32:24 +0000</pubDate></item><item><title>C-3</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-3.html</link><description>0--数字0
 ’0‘--字符0--ASCII值为48
 \0--字符--ASCII值为0
 EOF-- End Of File 文件的结束标志 值是-1 通过左键选中右键下拉栏中查看定义
