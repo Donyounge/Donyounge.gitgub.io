@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 13:12:05 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
-指针
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 14:23:50 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
+## 指针的基本概念
 内存是计算机中运行的程序的工作区，把内存分成一个一个很小的内存单元，每个内存单元的大小是一个字节
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
 32位电脑
@@ -24,9 +24,69 @@ return 0;
      //0000 0000 0000 0000 0000 0000 0000 0000 0000 1010 2进制
      //0       0       0       0       0       0       0       0      0        a      16进制
 内存中0x 00 00 00 0a 形式储存，监视中以倒序显示
-	每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样
+	每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样，进入调试模式后点击上方调试-&gt;窗口-&gt;内存/监视中查看
+# 指针变量大小
+int main()
+{
+	////int* p;
+	////char* p2;
+	////int* p1, p2, p3;//p1是指针变量，p2和p3是整型变量
+	////int* p1, * p2, * p3;//p1,p2,p3都是指针变量 
+/*此四行旨在表示指针变量的输入格式基本规则，无法运行*/
+	////无论什么类型的指针都是在创建指针变量
+	//指针变量是用来存放地址的
+	//指针变量的大小取决于一个地址存放需要多大空间
+	//32位及其地址：32bit位--4字节，所以指针变量大小是4字节
+	//64位及其地址：64bit位—8字节，所以指针变量大小是8字节
+	printf('%zu\n', sizeof(char*)); //上方x86是结果4字节，x64是8字节
+	printf('%zu\n', sizeof(short*));   //都
+	printf('%zu\n', sizeof(int*));       //是
+	printf('%zu\n', sizeof(float*));    //一
+	printf('%zu\n', sizeof(double*));//样
+	return 0;
+}
 
-。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</guid><pubDate>Mon, 03 Mar 2025 09:52:38 +0000</pubDate></item><item><title>C-1.4</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.4.html</link><description># 关键字
+# 结构体 struct
+结构体
+面对复杂对象时，可以用结构体来描述
+C语言中给了自定义类型的能力，自定义类型中有一种叫结构体：struct
+结构体是把一些单一类型组合在一起的做法
+```c
+struct Stu
+{
+	//结构体成员变量
+	char name[20];
+	int age;
+	char sex[10];
+	char tel[12];
+};//创建了一个结构体类型Stu，相当于盖房子的图纸
+int main()
+{
+struct Stu s = { 'zhangsan', 20, 'nan', '123456789' };//s是其中创建的一个变量
+printf('%s %d %s %s\n', s.name,s.age,s.sex,s.tel);      //s是结构体变量，name是结构体成员变量
+return 0;
+}
+```
+```c
+struct Stu
+{
+	char name[20];
+	int age;
+	char sex[10];
+	char tel[12];
+};
+void print(struct Stu* ps)//括号中的相当于一个结构体变量ps的地址,定义了一个无返回值的函数print
+{
+printf('%s %d %s %s\n', (*ps).name,(*ps).age,(*ps).sex,(*ps).tel); 
+//ps是结构体指针，-&gt;是结构体指针操作符，ps-&gt;name等价于(*ps).name
+printf('%s %d %s %s\n', ps-&gt;name, ps-&gt;age, ps-&gt;sex, ps-&gt;tel);
+}
+int main()
+{
+print(&amp;s);
+return 0；
+}
+```。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</guid><pubDate>Mon, 03 Mar 2025 09:52:38 +0000</pubDate></item><item><title>C-1.4</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.4.html</link><description># 关键字
 关键字 --C语言中本身内置的，无法自己创造
 数据类型相关：
 int char float double void short long signed unsigned
