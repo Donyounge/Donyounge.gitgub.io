@@ -108,11 +108,22 @@ int main()
 }
 结果2到11
 ```
-## 关于内存
-/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
+---
+# 关于存储
+计算机中的存储设备
+硬盘：存储速度慢，断电数据不丢失，空间大，价格低
+内存：RAM，存储速度快，断电数据丢失，空间大，价格低
+缓存：存储速度快，断电数据丢失，空间小，价格高
+寄存器：存储速度最快，断电数据丢失，空间小，价格高
+
+内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
 栈区：局部变量
 堆区：动态内存管理 malloc/free new/delete  calloc/realloc
 静态区：全局变量、静态变量，变量直至程序最后销毁
+
+浮点数的四舍五入不能用肉眼看到的结果来判断，因为浮点数在计算机中是近似存储的，不是精确存储的
+如12.455 在计算机中可能存储为12.45498799
+---
 ## 实例--全局变量
 ### 源文件1
 int g_val = 2025;//全局变量,具有外部链接属性
@@ -145,7 +156,44 @@ int main()
 	return x + y;
 }
 ```
-若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用。">
+若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
+
+# 寄存器变量 register
+int main()
+```c
+{
+	register int a = 10;//寄存器变量，建议将10存储在寄存器中，速度快，但是寄存器有限，不能存储过大的数据
+	return 0;//计算器会自动选择存储位置，不一定存储在寄存器中
+}
+```
+# 关于define
+#**define可以定义标识符常量**，不是变量，是一个宏，是一个预处理指令，不会分配内存，只是简单的替换
+```c
+#define NUM 100
+int main()
+{   printf('%d\n', NUM);
+int n = NUM;
+printf('%d\n', NUM);
+int arr[NUM] = { 0 };//定义数组
+	return 0;
+}
+```
+#**define定义宏**
+宏是有参数的，宏定义的时候不会检查参数类型，只是简单的替换
+宏名字（宏参数，宏参数） 宏体 （参数无类型）
+```c
+#define ADD(x,y) ((x)+(y))
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = ADD(a,b);
+	printf('%d\n', c);
+	return 0;
+}
+```
+
+。">
 <meta property="og:title" content="C-4">
 <meta property="og:description" content="# 关键字
 关键字 --C语言中本身内置的，无法自己创造
@@ -245,11 +293,22 @@ int main()
 }
 结果2到11
 ```
-## 关于内存
-/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
+---
+# 关于存储
+计算机中的存储设备
+硬盘：存储速度慢，断电数据不丢失，空间大，价格低
+内存：RAM，存储速度快，断电数据丢失，空间大，价格低
+缓存：存储速度快，断电数据丢失，空间小，价格高
+寄存器：存储速度最快，断电数据丢失，空间小，价格高
+
+内存使用时候会划分区域进行不同使用：栈区、堆区、静态区
 栈区：局部变量
 堆区：动态内存管理 malloc/free new/delete  calloc/realloc
 静态区：全局变量、静态变量，变量直至程序最后销毁
+
+浮点数的四舍五入不能用肉眼看到的结果来判断，因为浮点数在计算机中是近似存储的，不是精确存储的
+如12.455 在计算机中可能存储为12.45498799
+---
 ## 实例--全局变量
 ### 源文件1
 int g_val = 2025;//全局变量,具有外部链接属性
@@ -282,7 +341,44 @@ int main()
 	return x + y;
 }
 ```
-若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用。">
+若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
+
+# 寄存器变量 register
+int main()
+```c
+{
+	register int a = 10;//寄存器变量，建议将10存储在寄存器中，速度快，但是寄存器有限，不能存储过大的数据
+	return 0;//计算器会自动选择存储位置，不一定存储在寄存器中
+}
+```
+# 关于define
+#**define可以定义标识符常量**，不是变量，是一个宏，是一个预处理指令，不会分配内存，只是简单的替换
+```c
+#define NUM 100
+int main()
+{   printf('%d\n', NUM);
+int n = NUM;
+printf('%d\n', NUM);
+int arr[NUM] = { 0 };//定义数组
+	return 0;
+}
+```
+#**define定义宏**
+宏是有参数的，宏定义的时候不会检查参数类型，只是简单的替换
+宏名字（宏参数，宏参数） 宏体 （参数无类型）
+```c
+#define ADD(x,y) ((x)+(y))
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = ADD(a,b);
+	printf('%d\n', c);
+	return 0;
+}
+```
+
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/C-4.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -441,11 +537,19 @@ sizeof</p>
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }
 <span class="pl-s1">结果2到11</span></pre></div>
-<h2>关于内存</h2>
-<p>/内存使用时候会划分区域进行不同使用：栈区、堆区、静态区<br>
+<hr>
+<h1>关于存储</h1>
+<p>计算机中的存储设备<br>
+硬盘：存储速度慢，断电数据不丢失，空间大，价格低<br>
+内存：RAM，存储速度快，断电数据丢失，空间大，价格低<br>
+缓存：存储速度快，断电数据丢失，空间小，价格高<br>
+寄存器：存储速度最快，断电数据丢失，空间小，价格高</p>
+<p>内存使用时候会划分区域进行不同使用：栈区、堆区、静态区<br>
 栈区：局部变量<br>
 堆区：动态内存管理 malloc/free new/delete  calloc/realloc<br>
 静态区：全局变量、静态变量，变量直至程序最后销毁</p>
+<h2>浮点数的四舍五入不能用肉眼看到的结果来判断，因为浮点数在计算机中是近似存储的，不是精确存储的<br>
+如12.455 在计算机中可能存储为12.45498799</h2>
 <h2>实例--全局变量</h2>
 <h3>源文件1</h3>
 <p>int g_val = 2025;//全局变量,具有外部链接属性<br>
@@ -474,7 +578,35 @@ static int g_valpx = 2026;<br>
 {
 	<span class="pl-k">return</span> <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>;
 }</pre></div>
-<p>若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p></div>
+<p>若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p>
+<h1>寄存器变量 register</h1>
+<p>int main()</p>
+<div class="highlight highlight-source-c"><pre class="notranslate">{
+	register <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//寄存器变量，建议将10存储在寄存器中，速度快，但是寄存器有限，不能存储过大的数据</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;<span class="pl-c">//计算器会自动选择存储位置，不一定存储在寄存器中</span>
+}</pre></div>
+<h1>关于define</h1>
+<p>#<strong>define可以定义标识符常量</strong>，不是变量，是一个宏，是一个预处理指令，不会分配内存，只是简单的替换</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-c1">NUM</span> 100
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{   <span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-c1">NUM</span>);
+<span class="pl-smi">int</span> <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-c1">NUM</span>;
+<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-c1">NUM</span>);
+<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">NUM</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//定义数组</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<p>#<strong>define定义宏</strong><br>
+宏是有参数的，宏定义的时候不会检查参数类型，只是简单的替换<br>
+宏名字（宏参数，宏参数） 宏体 （参数无类型）</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-en">ADD</span>(<span class="pl-s1">x</span>,<span class="pl-s1">y</span>) ((x)+(y))
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">b</span> <span class="pl-c1">=</span> <span class="pl-c1">20</span>;
+	<span class="pl-smi">int</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-en">ADD</span>(<span class="pl-s1">a</span>,<span class="pl-s1">b</span>);
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">c</span>);
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
