@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 变量类型
+```c
+#include <stdio.h>
+
+int main()
+{
+	printf('%zu\n',sizeof(char));              //1    字节
+	printf('%zu\n',sizeof(short));             //2
+	printf('%zu\n',sizeof(int));               //4
+	printf('%zu\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%zu\n',sizeof(long long));         //8
+	printf('%zu\n',sizeof(float));             //4
+	printf('%zu\n',sizeof(double));            //8
+	printf('%zu\n',sizeof(long double));       //12
+
+        return 0；
+}
+```
+sizeof(数据类型)  计算数据类型所占的字节数
+一般前用：
+%zu(无符号)/%zd(有符号)
+打印sizeof的结果
+其余sizeof相关内容见 
+#5 
+# 内存单位
+
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
+	               byte 字节   8比特位 = 1字节 
+			   kb         1024byte = 1kb
+			   mb           1024kb = 1mb 
+		           gb           1024mb = 1gb
+			     tb           1024gb = 1tb
+			     pb           1024tb = 1pb
+			    eb           1024pb = 1eb
+			     zb           1024eb = 1zb
+---
+# 关于关键字extern的实例
+同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+## 源文件1
+```c
+int d = 22；
+```
+## 源文件2
+```c
+extern int d；\\声明了一个变量d，类型为int,来自外部文件的全局变量，可以在整个工程中适用
+```
+# 常量类型
+
+1. 字面常量
+2. const修饰的常变量
+3. define定义的标识符常量
+4. 枚举常量
+
+## 字面常量
+```c
+30   ;  //字面常量
+3.14 ;  
+'w'  ;  //字符，用了单引号
+'asd';  //能用肉眼观察到的常量，字符串用的双引号
+```
+## const 修饰的常变量
+```c
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
+<meta property="og:title" content="C-1.1">
+<meta property="og:description" content="# 变量类型
+```c
+#include <stdio.h>
+
+int main()
+{
+	printf('%zu\n',sizeof(char));              //1    字节
+	printf('%zu\n',sizeof(short));             //2
+	printf('%zu\n',sizeof(int));               //4
+	printf('%zu\n',sizeof(long));              //4         C语言规定sizeof(long)>=sizeof(int)
+	printf('%zu\n',sizeof(long long));         //8
+	printf('%zu\n',sizeof(float));             //4
+	printf('%zu\n',sizeof(double));            //8
+	printf('%zu\n',sizeof(long double));       //12
+
+        return 0；
+}
+```
+sizeof(数据类型)  计算数据类型所占的字节数
+一般前用：
+%zu(无符号)/%zd(有符号)
+打印sizeof的结果
+其余sizeof相关内容见 
+#5 
+# 内存单位
+
+计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小
+	               byte 字节   8比特位 = 1字节 
+			   kb         1024byte = 1kb
+			   mb           1024kb = 1mb 
+		           gb           1024mb = 1gb
+			     tb           1024gb = 1tb
+			     pb           1024tb = 1pb
+			    eb           1024pb = 1eb
+			     zb           1024eb = 1zb
+---
+# 关于关键字extern的实例
+同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：
+## 源文件1
+```c
+int d = 22；
+```
+## 源文件2
+```c
+extern int d；\\声明了一个变量d，类型为int,来自外部文件的全局变量，可以在整个工程中适用
+```
+# 常量类型
+
+1. 字面常量
+2. const修饰的常变量
+3. define定义的标识符常量
+4. 枚举常量
+
+## 字面常量
+```c
+30   ;  //字面常量
+3.14 ;  
+'w'  ;  //字符，用了单引号
+'asd';  //能用肉眼观察到的常量，字符串用的双引号
+```
+## const 修饰的常变量
+```c
+const int a = 10;//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.1.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>C-1.1</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">C-1.1</h1>
+<div class="title-right">
+    <a href="https://Donyounge.github.io/Donyounge.gitgub.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/Donyounge/Donyounge.gitgub.io/issues/3" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>变量类型</h1>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
+
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">char</span>));              <span class="pl-c">//1    字节</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">short</span>));             <span class="pl-c">//2</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">int</span>));               <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long</span>));              <span class="pl-c">//4         C语言规定sizeof(long)&gt;=sizeof(int)</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long long</span>));         <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">float</span>));             <span class="pl-c">//4</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">double</span>));            <span class="pl-c">//8</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>,<span class="pl-k">sizeof</span>(<span class="pl-smi">long <span class="pl-smi">double</span></span>));       <span class="pl-c">//12</span>
+
+        <span class="pl-k">return</span> <span class="pl-c1">0</span>；
+}</pre></div>
+<p>sizeof(数据类型)  计算数据类型所占的字节数<br>
+一般前用：<br>
+%zu(无符号)/%zd(有符号)<br>
+打印sizeof的结果<br>
+其余sizeof相关内容见<br>
+#5</p>
+<h1>内存单位</h1>
+<h2>计算机中的单位 bit  比特位 计算机中的单位bit为存1个二进制比特位所使用的大小<br>
+byte 字节   8比特位 = 1字节<br>
+kb         1024byte = 1kb<br>
+mb           1024kb = 1mb<br>
+gb           1024mb = 1gb<br>
+tb           1024gb = 1tb<br>
+pb           1024tb = 1pb<br>
+eb           1024pb = 1eb<br>
+zb           1024eb = 1zb</h2>
+<h1>关于关键字extern的实例</h1>
+<p>同一个项目下，不同源文件之间的参数是可以通过一定手段实现跨越源文件使用的，如：</p>
+<h2>源文件1</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-s1">d</span> <span class="pl-c1">=</span> <span class="pl-c1">22</span>；</pre></div>
+<h2>源文件2</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">extern</span> <span class="pl-smi">int</span> <span class="pl-s1">d</span>；\\<span class="pl-s1">声明了一个变量d</span>，<span class="pl-s1">类型为int</span>,<span class="pl-s1">来自外部文件的全局变量</span>，<span class="pl-s1">可以在整个工程中适用</span></pre></div>
+<h1>常量类型</h1>
+<ol>
+<li>字面常量</li>
+<li>const修饰的常变量</li>
+<li>define定义的标识符常量</li>
+<li>枚举常量</li>
+</ol>
+<h2>字面常量</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-c1">30</span>   ;  <span class="pl-c">//字面常量</span>
+<span class="pl-c1">3.14</span> ;  
+<span class="pl-c1">'w'</span>  ;  <span class="pl-c">//字符，用了单引号</span>
+<span class="pl-s">"asd"</span>;  <span class="pl-c">//能用肉眼观察到的常量，字符串用的双引号</span></pre></div>
+<h2>const 修饰的常变量</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">const</span> <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//const修饰的a，本职是变量，但是不能被修改，有了常量的属性。</span>
+<span class="pl-smi">int</span> <span class="pl-s1">arr</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> { <span class="pl-c1">0</span> };<span class="pl-c">//创建了一个数组，可以存放10个整型，需要输入一个常量，但是上述的a不可替代10</span></pre></div>
+<h2>define定义的标识符常量</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-c1">MAX</span> 100 //不可被更改
+<span class="pl-k">#define</span> <span class="pl-c1">HHH</span> "sada"
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-c1">MAX</span>);
+	<span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">MAX</span>;
+	<span class="pl-en">printf</span>(<span class="pl-s">"%s\n"</span>, <span class="pl-c1">HHH</span>);<span class="pl-c">//打印字符串使用%s 单个字符打印用%c</span>
+<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h2>枚举常量</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">enum</span> <span class="pl-smi">Color</span>
+	{
+	<span class="pl-c1">RED</span>,<span class="pl-c">//此三为枚举常量</span>
+	<span class="pl-c1">GREEN</span>,
+	<span class="pl-c1">BLUE</span>
+	};
+<span class="pl-k">enum</span> <span class="pl-smi">Color</span> <span class="pl-s1">c</span> <span class="pl-c1">=</span> <span class="pl-c1">RED</span>;
+<span class="pl-k">enum</span> <span class="pl-smi">SEX</span>
+	{
+         <span class="pl-s1">Male</span>,
+	 <span class="pl-s1">Female</span>,
+	 <span class="pl-s1">Secret</span>
+         };  </pre></div>
+<h2>枚举常量先进行内容的定义列举，之后再调用枚举常量时所定义的常量的形式只能从枚举的内容中定义<br>
+例如 enum SEX x=1 是不允许的</h2>
+<h1>字符与字符串相关</h1>
+<p>#include &lt;string.h&gt;是包含字符串处理函数的头文件。这个头文件定义了多种操作字符数组的函数，如strlen（求字符串长度）、strcmp（比较两个字符串是否相同）、strcpy（字符串拷贝操作）、strcat（字符串连接操作）等</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">char</span> <span class="pl-s1">ch</span> <span class="pl-c1">=</span> <span class="pl-c1">'w'</span>;  \\<span class="pl-s1">单个字符用</span>‘’
+<span class="pl-smi">char</span> <span class="pl-s1">sh</span> <span class="pl-c1">=</span> <span class="pl-s">"adad"</span>;\\<span class="pl-s1">字符串用</span>“”
+<span class="pl-smi">char</span> <span class="pl-s1">arr1</span>[<span class="pl-c1">10</span>] <span class="pl-c1">=</span> <span class="pl-s">"affdfe"</span>;<span class="pl-c">//arr1后面的[]中的内容是字符串，字符串的结尾有一个\0，所以arr[10]中只能存放9个字符,也可以不写[]中的内容，长度由字符串的长度决定</span></pre></div>
+<p>F10进入调试模式，程序通过F10逐行运行，将程序运行到 return0；后进入监视，观察字符串各个字符的的储存情况</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">char</span> <span class="pl-s1">arr2</span>[] <span class="pl-c1">=</span> { <span class="pl-c1">'a'</span>,<span class="pl-c1">'b'</span>,<span class="pl-c1">'c'</span>,<span class="pl-c1">'d'</span>,<span class="pl-c1">'e'</span>,<span class="pl-c1">'f'</span>};<span class="pl-c">//字符串的结束标志是\0，所以arr2中的字符串没有结束标志，所以arr2中的字符串会被错误输出直至找到\0</span>
+<span class="pl-c">//	printf("%s\n", arr1);//abcdef</span>
+<span class="pl-c">//	printf("%s\n", arr2);//错误输出</span>
+<span class="pl-c">//	printf("\0");//\0是字符串的结束标志，所以这里输出的是一个空格</span>
+<span class="pl-c">//	strlen(arr1);//strlen是一个函数，用来计算字符串的长度，不包括\0,string length</span>
+<span class="pl-c">//	int len  = strlen ("abc");//strlen的参数可以是一个字符串，也可以是一个字符数组</span>
+<span class="pl-c">//	printf("%d\n", len); 3</span></pre></div>
+<h1>转义字符相关</h1>
+<h2>实例</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">#define</span> <span class="pl-s1">_CRT_SECURE_NO_WARNINGS</span>
+<span class="pl-k">#include</span> <span class="pl-s">&lt;stdio.h&gt;</span>
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-c">//printf("adc\n");          \\输出adc</span>
+	<span class="pl-c">//printf("adc\0adwq"); \\输出adc,\0后的内容不输出</span>
+<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
+<h2>常见转义字符汇总</h2>
+<p>\? 书写连续多个问号时候使用，防止编译器将其识别为三目运算符 早期编译器中三字母词 ??)代表]  ??(代表[<br>
+\a 警告字符，响铃<br>
+\b 退格<br>
+\f 换页<br>
+\n 换行<br>
+\r 回车<br>
+\t 水平制表符<br>
+\v 垂直制表符<br>
+\ 反斜杠<br>
+\' 单引号<br>
+\" 双引号<br>
+\0 空字符<br>
+\ddd 1-3位八进制数所代表的字符<br>
+\xhh 1-2位十六进制数所代表的字符<br>
+\uhhhh 4位十六进制数所代表的字符<br>
+\Uhhhhhhhh 8位十六进制数所代表的字符<br>
+\r\n windows下的换行符<br>
+\n linux下的换行符<br>
+\r mac下的换行符</p>
+<h1>打印使用</h1>
+<p>%d  十进制有符号整数<br>
+%u  十进制无符号整数<br>
+%o  八进制整数<br>
+%x  十六进制整数<br>
+%f  float浮点数<br>
+%lf double双精度浮点数<br>
+%e  指数形式的浮点数<br>
+%g  指数形式的浮点或小数<br>
+%c  字符<br>
+%s  字符串<br>
+%p  指针的值<br>
+%n  存储已写字符的数量<br>
+%m  打印errno对应的错误信息<br>
+%I[类型]  读取输入的数据<br>
+%*  跳过输入的数据<br>
+%[]  读取输入的数据<br>
+%[^]  读取输入的数据<br>
+%zu  size_t类型，无符号<br>
+%zd  ssize_t类型，有符号<br>
+%lu  unsigned long类型<br>
+%ld  long类型</p>
+<h2>实例</h2>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-s1">include</span><span class="pl-c1">&lt;</span><span class="pl-s1">stdio</span>.<span class="pl-c1">h</span><span class="pl-c1">&gt;</span>
+<span class="pl-s1">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-en">printf</span>(<span class="pl-s">"asdd\n"</span>)<span class="pl-c1"></span>;<span class="pl-c">//只有字符串和单个字符可以这样打印，其余都需要按下面的方式打印</span>
+	<span class="pl-c">//printf("%s\n","asdd");\\标准格式</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"\a"</span>);\\<span class="pl-smi">响铃</span>
+	<span class="pl-s1">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\130'</span>);<span class="pl-c">// \130是八进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\x58'</span>);<span class="pl-c">// \x58是十六进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'X'</span>);
+	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-en">strlen</span>(<span class="pl-s">"qw ert"</span>));<span class="pl-c">//加了空格，所以除了\0是六个字符\\6</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://Donyounge.github.io/Donyounge.gitgub.io">Donyounge的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","Donyounge/Donyounge.gitgub.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
