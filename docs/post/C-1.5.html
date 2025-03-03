@@ -16,6 +16,7 @@
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
 32位电脑
 地址线有32根，2^32个内存单元，每个内存单元的大小是一个字节，所以内存大小是2^32个字节，按照提到过的换算单位，是4GB
+
 ```c
 int main()
 {
@@ -37,6 +38,7 @@ return 0;
 内存中0x 00 00 00 0a 形式储存，监视中以倒序显示
 	每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样，进入调试模式后点击上方调试->窗口->内存/监视中查看
 # 指针变量大小
+```c
 int main()
 {
 	////int* p;
@@ -56,6 +58,7 @@ int main()
 	printf('%zu\n', sizeof(double*));//样
 	return 0;
 }
+```
 
 # 结构体 struct
 结构体
@@ -105,6 +108,7 @@ return 0；
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
 32位电脑
 地址线有32根，2^32个内存单元，每个内存单元的大小是一个字节，所以内存大小是2^32个字节，按照提到过的换算单位，是4GB
+
 ```c
 int main()
 {
@@ -126,6 +130,7 @@ return 0;
 内存中0x 00 00 00 0a 形式储存，监视中以倒序显示
 	每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样，进入调试模式后点击上方调试->窗口->内存/监视中查看
 # 指针变量大小
+```c
 int main()
 {
 	////int* p;
@@ -145,6 +150,7 @@ int main()
 	printf('%zu\n', sizeof(double*));//样
 	return 0;
 }
+```
 
 # 结构体 struct
 结构体
@@ -282,25 +288,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 内存中0x 00 00 00 0a 形式储存，监视中以倒序显示<br>
 每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样，进入调试模式后点击上方调试-&gt;窗口-&gt;内存/监视中查看</p>
 <h1>指针变量大小</h1>
-<p>int main()<br>
-{<br>
-////int* p;<br>
-////char* p2;<br>
-////int* p1, p2, p3;//p1是指针变量，p2和p3是整型变量<br>
-////int* p1, * p2, * p3;//p1,p2,p3都是指针变量<br>
-/<em>此四行旨在表示指针变量的输入格式基本规则，无法运行</em>/<br>
-////无论什么类型的指针都是在创建指针变量<br>
-//指针变量是用来存放地址的<br>
-//指针变量的大小取决于一个地址存放需要多大空间<br>
-//32位及其地址：32bit位--4字节，所以指针变量大小是4字节<br>
-//64位及其地址：64bit位—8字节，所以指针变量大小是8字节<br>
-printf("%zu\n", sizeof(char*)); //上方x86是结果4字节，x64是8字节<br>
-printf("%zu\n", sizeof(short*));   //都<br>
-printf("%zu\n", sizeof(int*));       //是<br>
-printf("%zu\n", sizeof(float*));    //一<br>
-printf("%zu\n", sizeof(double*));//样<br>
-return 0;<br>
-}</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{
+	<span class="pl-c">////int* p;</span>
+	<span class="pl-c">////char* p2;</span>
+	<span class="pl-c">////int* p1, p2, p3;//p1是指针变量，p2和p3是整型变量</span>
+	<span class="pl-c">////int* p1, * p2, * p3;//p1,p2,p3都是指针变量 </span>
+<span class="pl-c">/*此四行旨在表示指针变量的输入格式基本规则，无法运行*/</span>
+	<span class="pl-c">////无论什么类型的指针都是在创建指针变量</span>
+	<span class="pl-c">//指针变量是用来存放地址的</span>
+	<span class="pl-c">//指针变量的大小取决于一个地址存放需要多大空间</span>
+	<span class="pl-c">//32位及其地址：32bit位--4字节，所以指针变量大小是4字节</span>
+	<span class="pl-c">//64位及其地址：64bit位—8字节，所以指针变量大小是8字节</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-smi">char</span><span class="pl-c1">*</span>)); <span class="pl-c">//上方x86是结果4字节，x64是8字节</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-smi">short</span><span class="pl-c1">*</span>));   <span class="pl-c">//都</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-smi">int</span><span class="pl-c1">*</span>));       <span class="pl-c">//是</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-smi">float</span><span class="pl-c1">*</span>));    <span class="pl-c">//一</span>
+	<span class="pl-en">printf</span>(<span class="pl-s">"%zu\n"</span>, <span class="pl-k">sizeof</span>(<span class="pl-smi">double</span><span class="pl-c1">*</span>));<span class="pl-c">//样</span>
+	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+}</pre></div>
 <h1>结构体 struct</h1>
 <p>结构体<br>
 面对复杂对象时，可以用结构体来描述<br>

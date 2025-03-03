@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 14:23:50 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 14:24:24 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
 ## 指针的基本概念
 内存是计算机中运行的程序的工作区，把内存分成一个一个很小的内存单元，每个内存单元的大小是一个字节
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
 32位电脑
 地址线有32根，2^32个内存单元，每个内存单元的大小是一个字节，所以内存大小是2^32个字节，按照提到过的换算单位，是4GB
+
 ```c
 int main()
 {
@@ -26,6 +27,7 @@ return 0;
 内存中0x 00 00 00 0a 形式储存，监视中以倒序显示
 	每次运行程序，a变量都会重新创建，故其地址每次运行结果不一样，进入调试模式后点击上方调试-&gt;窗口-&gt;内存/监视中查看
 # 指针变量大小
+```c
 int main()
 {
 	////int* p;
@@ -45,6 +47,7 @@ int main()
 	printf('%zu\n', sizeof(double*));//样
 	return 0;
 }
+```
 
 # 结构体 struct
 结构体
