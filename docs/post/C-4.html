@@ -26,6 +26,7 @@ typedef
 const volatile
 其他：
 sizeof
+# auto
 ```c
 int main()
 {   auto int a = 10;//自动变量，作用于内部，自动于设定时创建，于最后自动销毁，//auto可以省略
@@ -126,6 +127,7 @@ int main()
 ---
 ## 实例--全局变量
 ### 源文件1
+```c
 int g_val = 2025;//全局变量,具有外部链接属性
 extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量
 int main()
@@ -133,12 +135,16 @@ int main()
 printf('%d\n', g_valp);//2026
 return 0;
 } 
+```
 ### 源文件2
+```c
 int g_valp = 2026;//全局变量
 static int g_valpx = 2026;
+```
 //static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
 # 实例--函数
 ### 源文件1
+
 ```c
 extern int add(int x,int y);//声明外部函数
 int main()
@@ -148,14 +154,17 @@ int main()
 	int sum = add(a, b);
 	printf('sum=%d\n', sum);
 	return 0;
+
 ```
 ### 源文件2
+
 ```c
  Add(int x, int y)
 {
 	return x + y;
 }
 ```
+
 若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
 
 # 寄存器变量 register
@@ -211,6 +220,7 @@ typedef
 const volatile
 其他：
 sizeof
+# auto
 ```c
 int main()
 {   auto int a = 10;//自动变量，作用于内部，自动于设定时创建，于最后自动销毁，//auto可以省略
@@ -311,6 +321,7 @@ int main()
 ---
 ## 实例--全局变量
 ### 源文件1
+```c
 int g_val = 2025;//全局变量,具有外部链接属性
 extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量
 int main()
@@ -318,12 +329,16 @@ int main()
 printf('%d\n', g_valp);//2026
 return 0;
 } 
+```
 ### 源文件2
+```c
 int g_valp = 2026;//全局变量
 static int g_valpx = 2026;
+```
 //static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
 # 实例--函数
 ### 源文件1
+
 ```c
 extern int add(int x,int y);//声明外部函数
 int main()
@@ -333,14 +348,17 @@ int main()
 	int sum = add(a, b);
 	printf('sum=%d\n', sum);
 	return 0;
+
 ```
 ### 源文件2
+
 ```c
  Add(int x, int y)
 {
 	return x + y;
 }
 ```
+
 若Add前加static，改变了函数的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用
 
 # 寄存器变量 register
@@ -465,6 +483,7 @@ typedef<br>
 const volatile<br>
 其他：<br>
 sizeof</p>
+<h1>auto</h1>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-en">main</span>()
 {   auto <span class="pl-smi">int</span> <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-c1">10</span>;<span class="pl-c">//自动变量，作用于内部，自动于设定时创建，于最后自动销毁，//auto可以省略</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">a</span>);
@@ -552,17 +571,17 @@ sizeof</p>
 如12.455 在计算机中可能存储为12.45498799</h2>
 <h2>实例--全局变量</h2>
 <h3>源文件1</h3>
-<p>int g_val = 2025;//全局变量,具有外部链接属性<br>
-extern int g_valp;//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量<br>
-int main()<br>
-{<br>
-printf("%d\n", g_valp);//2026<br>
-return 0;<br>
-}</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-s1">g_val</span> <span class="pl-c1">=</span> <span class="pl-c1">2025</span>;<span class="pl-c">//全局变量,具有外部链接属性</span>
+<span class="pl-k">extern</span> <span class="pl-smi">int</span> <span class="pl-s1">g_valp</span>;<span class="pl-c">//声明外部变量，但是无法提取到g_valpx，以为它不是全局变量</span>
+<span class="pl-smi">int</span> <span class="pl-en">main</span>()
+{ 
+<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>, <span class="pl-s1">g_valp</span>);<span class="pl-c">//2026</span>
+<span class="pl-k">return</span> <span class="pl-c1">0</span>;
+} </pre></div>
 <h3>源文件2</h3>
-<p>int g_valp = 2026;//全局变量<br>
-static int g_valpx = 2026;<br>
-//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p>
+<div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-smi">int</span> <span class="pl-s1">g_valp</span> <span class="pl-c1">=</span> <span class="pl-c1">2026</span>;<span class="pl-c">//全局变量</span>
+<span class="pl-k">static</span> <span class="pl-smi">int</span> <span class="pl-s1">g_valpx</span> <span class="pl-c1">=</span> <span class="pl-c1">2026</span>;</pre></div>
+<p>//static修饰全局变量，改变了全局变量的链接属性，外部链接属性变为内部链接属性，只能在本文件中使用</p>
 <h1>实例--函数</h1>
 <h3>源文件1</h3>
 <div class="highlight highlight-source-c"><pre class="notranslate"><span class="pl-k">extern</span> <span class="pl-smi">int</span> <span class="pl-en">add</span>(<span class="pl-smi">int</span> <span class="pl-s1">x</span>,<span class="pl-smi">int</span> <span class="pl-s1">y</span>);<span class="pl-c">//声明外部函数</span>
