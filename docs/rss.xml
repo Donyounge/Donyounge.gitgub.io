@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 14:24:24 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
-## 指针的基本概念
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 14:29:51 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
+## 指针的基本概念 解引用操作符
 内存是计算机中运行的程序的工作区，把内存分成一个一个很小的内存单元，每个内存单元的大小是一个字节
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
 32位电脑
@@ -50,7 +50,7 @@ int main()
 ```
 
 # 结构体 struct
-结构体
+## 结构体 和 结构体指针操作符
 面对复杂对象时，可以用结构体来描述
 C语言中给了自定义类型的能力，自定义类型中有一种叫结构体：struct
 结构体是把一些单一类型组合在一起的做法
