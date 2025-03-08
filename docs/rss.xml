@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Mon, 03 Mar 2025 16:17:41 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 08 Mar 2025 07:39:25 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
 ## 指针的基本概念 解引用操作符
 内存是计算机中运行的程序的工作区，把内存分成一个一个很小的内存单元，每个内存单元的大小是一个字节
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
@@ -648,7 +648,7 @@ int main()
 {
 	int arr[10] = { 11,12,13,14,15,16,17,18,19,20 };//其实数组里的元素是有隐藏的排序下标的，从0开始
 //数组初始化，可以不指定其大小，[]中可以不填写内容，它会自动根据后续自行确定存放个数
-	printf('%d\n',arr[8]);                    //打印数组里的第八个元素 
+	printf('%d\n',arr[8]);                    //打印数组里的下标为8的元素，19 
 	int i = 0;
 	while (i &lt; 10)
 	{
