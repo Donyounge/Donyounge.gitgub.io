@@ -361,6 +361,7 @@ zb           1024eb = 1zb</h2>
 	<span class="pl-s1">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\130'</span>);<span class="pl-c">// \130是八进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'\x58'</span>);<span class="pl-c">// \x58是十六进制数，代表的是十进制的88，按照ASCII编码，所以输出的是X</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>, <span class="pl-c1">'X'</span>);
+        <span class="pl-en">printf</span>(<span class="pl-s">"%c\n"</span>,<span class="pl-c1">88</span>);<span class="pl-c">//88是X的ASCII值</span>
 	<span class="pl-en">printf</span>(<span class="pl-s">"%d\n"</span>,<span class="pl-en">strlen</span>(<span class="pl-s">"qw ert"</span>));<span class="pl-c">//加了空格，所以除了\0是六个字符\\6</span>
 	<span class="pl-k">return</span> <span class="pl-c1">0</span>;
 }</pre></div></div>
