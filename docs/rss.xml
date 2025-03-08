@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 08 Mar 2025 07:39:25 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Donyounge的博客</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link><description>我自己的博客，记录学习生活</description><copyright>Donyounge的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Donyounge.github.io/Donyounge.gitgub.io</link></image><lastBuildDate>Sat, 08 Mar 2025 16:14:02 +0000</lastBuildDate><managingEditor>Donyounge的博客</managingEditor><ttl>60</ttl><webMaster>Donyounge的博客</webMaster><item><title>C-2.1</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.1.html</link><description># 语句语句
+C中语句分以下五类：
+
+1. 表达式语句
+2. 函数调用语句
+3. 控制语句
+4. 复合语句
+5. 空语句
+
+# 控制语句
+控制语句用于控制程序的执行流程，以实现程序的各种结构方式，它们由特定的语句定义符组成，C语言由九种控制语句。</description><guid isPermaLink="true">https://Donyounge.github.io/Donyounge.gitgub.io/post/C-2.1.html</guid><pubDate>Tue, 04 Mar 2025 16:11:50 +0000</pubDate></item><item><title>C-1.5</title><link>https://Donyounge.github.io/Donyounge.gitgub.io/post/C-1.5.html</link><description># 指针
 ## 指针的基本概念 解引用操作符
 内存是计算机中运行的程序的工作区，把内存分成一个一个很小的内存单元，每个内存单元的大小是一个字节
 内存是由很多个字节组成的，每个字节都有唯一的一个编号，这些编号称为该内存单元的地址
